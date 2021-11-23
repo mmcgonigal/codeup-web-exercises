@@ -1,58 +1,58 @@
 var a =1 ;
 var b = a++;
-console.log(a);
-console.log(b);
+console.log(a); //2
+console.log(b);//1
 
 var c = ++a;
-console.log(a)
-console.log(c)
+console.log(a)//3
+console.log(c)//3
 var d = "hello";
 var e = false;
-console.log(d++);
-console.log(e++);
+console.log(d++);//NaN
+console.log(e++);//NaN?..
 
 var perplexed;//
 console.log(perplexed + 2);//NaN
 var price = 2.7;
 price.toFixed(2)//2.70
-console.log(price.toFixed(2));
+console.log(price.toFixed(2)); //2.70
 /*var price="2.7"
 price.toFixed(2)//NaN?
 console.log(price.toFixed(2));*/
 
 
-console.log(isNaN(0))
-
-
-console.log(isNaN(1))
-console.log(isNaN(""))
-console.log(isNaN("string"))
-console.log(isNaN("0"))
-console.log(isNaN("1"))
-console.log(isNaN("3.145"))
-console.log(isNaN(Number.MAX_VALUE))
-console.log(isNaN(Infinity))
-console.log(isNaN("true"))
-console.log(isNaN(true))
-console.log(isNaN("false"))
-console.log(isNaN(false))
+console.log(isNaN(0)) //false
+console.log(isNaN(1)) //false
+console.log(isNaN("")) //?.. false - empty string converted into 0 ->number
+console.log(isNaN("string"))//true
+console.log(isNaN("0"))//false
+console.log(isNaN("1"))//false
+console.log(isNaN("3.145"))//false
+console.log(isNaN(Number.MAX_VALUE))//false
+console.log(isNaN(Infinity))//false
+console.log(isNaN("true")) //true
+console.log(isNaN(true))//flase
+console.log(isNaN("false"))//true
+console.log(isNaN(false))//flase
 
 // to illustrate why the isNaN() function is needed:
-console.log(NaN == NaN)
-console.log(!true)
-console.log(!false)
-console.log(!!true)
-console.log(!!false)
-console.log(!!0)
-console.log(!!-0)
-console.log(!!1)
-console.log(!!-1)
-console.log(!!0.1)
-console.log(!!"hello")
-console.log(!!"")
-console.log(!!'')
-console.log(!!"false")
-console.log(!!"0")
+console.log(NaN == NaN)//false. you can't compare it because NaN doesn't have value..?
+
+
+console.log(!true)//false
+console.log(!false)//true
+console.log(!!true)//true
+console.log(!!false)//false
+console.log(!!0)//false
+console.log(!!-0)//false
+console.log(!!1)//1 so true
+console.log(!!-1)//true
+console.log(!!0.1)//true
+console.log(!!"hello")//truthy
+console.log(!!"")//false -empty string
+console.log(!!'')//false =-empty string
+console.log(!!"false") //truthy
+console.log(!!"0")//truthy.
 
 /*Execute the following statement in the Chrome JavaScript console and then follow the directions below.
 
@@ -77,6 +77,54 @@ console.log(sample.indexOf("C"));
 let cIndex = sample.indexOf('C');
 let pIndex = sample.indexOf('p')+1;
 console.log(sample.substring(cIndex, pIndex));
+/*You have rented some movies for your kids: The little mermaid (for 3 days), Brother Bear (for 5 days, they love it),
+and Hercules (1 day, you don't know yet if they're going to like it). If price for a movie per day is $3, how much will you have to pay?
+*/
+let littleMermaid = 3;
+let brotherBear = 5;
+let hercules = 1;
+let rent = littleMermaid * brotherBear * hercules * 3;
+console.log (rent);
+/*Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook, they pay you a different rate per hour.
+Google pays $400, Amazon $380, and Facebook $350.
+How much will you receive in payment for this week? You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon.
+*/
+let gPay = 400;
+let aPay = 380;
+let fPay = 350;
+let payCheck = gPay * 6 + aPay * 4 + fPay * 10;
+console.log(payCheck);
+/*A student can be enrolled in a class only
+if the class is not full and the class schedule does not conflict with her current schedule.
+*/
+
+/*/if (class not full && schedule not conflict){
+ enroll student
+}
+*/
+
+/*A product offer can be applied only if a person buys more than 2 items,
+and the offer has not expired. Premium members do not need to buy a specific amount of products.
+*/
+
+
+var username = "codeup" ;
+var password = "notastrongpassword";
+//the password must be at least 5 characters
+password = password.length >= 5
+//the password must not include the username
+
+
+//the username must be no more than 20 characters
+username = username.length <= 20
+//neither the username or password can start or end with whitespace
+username = username.trim();
+password = password.trim();
+
+
+
+
+
 
 
 
