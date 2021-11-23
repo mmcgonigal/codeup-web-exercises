@@ -1,4 +1,4 @@
-var a =1 ;
+var a = 1;
 var b = a++;
 console.log(a); //2
 console.log(b);//1
@@ -75,7 +75,7 @@ console.log(sample);
 console.log(sample.indexOf("c"));//because there is no lowercase c
 console.log(sample.indexOf("C"));
 let cIndex = sample.indexOf('C');
-let pIndex = sample.indexOf('p')+1;
+let pIndex = sample.indexOf('p') + 1;
 console.log(sample.substring(cIndex, pIndex));
 /*You have rented some movies for your kids: The little mermaid (for 3 days), Brother Bear (for 5 days, they love it),
 and Hercules (1 day, you don't know yet if they're going to like it). If price for a movie per day is $3, how much will you have to pay?
@@ -83,8 +83,8 @@ and Hercules (1 day, you don't know yet if they're going to like it). If price f
 let littleMermaid = 3;
 let brotherBear = 5;
 let hercules = 1;
-let rent = littleMermaid * brotherBear * hercules * 3;
-console.log (rent);
+let rent = (littleMermaid + brotherBear + hercules) * 3;
+console.log(rent);
 /*Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook, they pay you a different rate per hour.
 Google pays $400, Amazon $380, and Facebook $350.
 How much will you receive in payment for this week? You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon.
@@ -97,30 +97,58 @@ console.log(payCheck);
 /*A student can be enrolled in a class only
 if the class is not full and the class schedule does not conflict with her current schedule.
 */
-
-/*/if (class not full && schedule not conflict){
- enroll student
+let enroll = "possible room";
+let schedule = "not conflict";
+let semester = enroll && schedule;
+if (semester) {
+    console.log("new semester class");
+} else {
+    console.log("well.. I can try seasonal class")
 }
-*/
 
 /*A product offer can be applied only if a person buys more than 2 items,
 and the offer has not expired. Premium members do not need to buy a specific amount of products.
 */
 
 
-var username = "codeup" ;
+/*
+var username = "codeup";
 var password = "notastrongpassword";
 //the password must be at least 5 characters
 password = password.length >= 5
+console.log(password);
 //the password must not include the username
 
 
 //the username must be no more than 20 characters
-username = username.length <= 20
+username = username.length <= 20;
+console.log(username);
 //neither the username or password can start or end with whitespace
 username = username.trim();
 password = password.trim();
 
+
+// Erstwhile, the legislature determined that being at the bar is not necessary in order to be served,
+// but all the remaining conditions are still valid
+// Change the expression assigned to cashOnHand to make isAtBar optional  while still requiring the remaining values to be true
+
+let isAtBar = true;
+let bac = .00;
+let age = 22;
+let cashOnHand = 4.99;
+
+let canHaveADrink = (bac < .08 && age >= 21 && cashOnHand >= 5.00) // true && false && true && true --> false
+
+if (canHaveADrink && isAtBar) {
+    console.log("Have a brewski my dude!");
+} else if(canHaveADrink || isAtBar){
+    console.log("here is togo for you!");
+} else
+{
+    console.log("sorry!");
+};
+
+*/
 
 
 
