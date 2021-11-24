@@ -54,11 +54,13 @@ var random = Math.floor((Math.random() * 3) + 1);
 function isTwo(a){
     if (a===2){
         return true;
-    }else {
-        return false
+    }else if(a===3){
+        return "maybe..."
+    }else{
+        return false;
     }
 };
-console.log(isTwo(3))
+console.log(isTwo(1000))
 console.log(isTwo(random));
 
 /**
@@ -100,10 +102,15 @@ console.log(calculateTip(5,0.10))
  */
 
 function applyDiscount (originalPrice,coupon){
-    let finalPrice = originalPrice * coupon + originalPrice
-    return finalPrice
-
-}
+    return originalPrice-(originalPrice * coupon)
+    }
 console.log(applyDiscount(100,0.2));
+
+
+function food(one,two){
+    console.log("this is my favorite :" + one + two)
+}
+food(" burger ", "pizza")
+
 
 
