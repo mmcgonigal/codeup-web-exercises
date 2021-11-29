@@ -17,7 +17,7 @@ function isEven(number1){
 }
 isEven(10);
 function identity(input){
-    console.log(input)
+    return input;
 }
 identity("banana");
 function addFive(input1){
@@ -26,9 +26,14 @@ function addFive(input1){
 addFive(10);
 addFive("banana");
 function isMultipleOfFive(number2){
-    console.log(number2*5)
+    let multipleFive = number2 % 5
+    if(multipleFive===0){
+        return multipleFive;
+    } else {
+        console.log ("The number is not multiple of five!")
+    }
 }
-isMultipleOfFive(10);
+console.log(isMultipleOfFive(10));
 function isThree(n){
 if(n===3){
     console.log("true")
@@ -38,5 +43,59 @@ if(n===3){
 };
 isThree(3)
 function isMultipleOfThree(input2){
-
+   let multipleThree = input2 % 3;
+   if (multipleThree ===0){
+       return multipleThree;
+   }else {
+       console.log("The number is not multiple of 3.")
+   }
 }
+isMultipleOfThree(10);
+function isMultipleOfThreeAndFive(input3){
+    let multipleThreeAndFive = input3 % 3 ===0 && input3 % 5 === 0
+    if (multipleThreeAndFive){
+        console.log("This number is multiple of 3 and also multiple of 5");
+    } else {
+        console.log ("This does not meet criteria,Sorry! ");
+    }
+}
+// function isMultipleOfThreeAndFive(input3){
+//     let multipleThree = input3 % 3 === 0;
+//     let multipleFive = input3 % 5 === 0
+//     if (multipleThree && multipleFive){
+//         console.log ("This number is multiple of 3 and also multiple of 5");
+//     } else {
+//         console.log( "Sorry, This does not meet criteria ")
+//     }
+// }
+
+isMultipleOfThreeAndFive(15);
+isMultipleOfThreeAndFive(17);
+function isMultipleOf(target,n){
+    let multipleOf= target % n;
+    if(multipleOf === 0 ){
+        console.log("YES");
+    }else {
+        console.log("NOPE");
+    }
+}
+isMultipleOf(14,2)
+isMultipleOf(13,2);
+
+function isTrue(a){
+    let type1= Boolean(a)
+    if(type1){
+        console.log ("True...")
+    } else {
+        console.log("False")
+    }
+}
+console.log(isTrue(0))
+
+
+
+
+
+
+
+
