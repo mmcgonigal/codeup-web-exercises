@@ -84,14 +84,14 @@ console.log(calculateTip(5,0.10))
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-function calculateTipPrompt(pretotal) {
-    let tip = prompt(`Before Tip, ${pretotal} is  your total. 
-    How many percentage would you like to tip?`);
-    let total
-    confirm(`your total inclunding tip will be ${pretotal + (pretotal * tip * 0.01)}, Would you like to proceed?`)
-    consol.log(total);
-}
-calculateTipPrompt((20))
+// function calculateTipPrompt(pretotal) {
+//     let tip = prompt(`Before Tip, ${pretotal} is  your total.
+//     How many percentage would you like to tip?`);
+//     let total
+//     confirm(`your total inclunding tip will be ${pretotal + (pretotal * tip * 0.01)}, Would you like to proceed?`)
+//     consol.log(total);
+// }
+// calculateTipPrompt((20))
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -117,6 +117,16 @@ function food(one,two){
     console.log("this is my favorite :" + one + two)
 }
 food(" burger ", "pizza")
+
+//reverseString(string)
+function reverseString(str){
+    let splitString = str.split("");
+    let reverseString = splitString.reverse("");
+    let joinString = reverseString.join("");
+    console.log(joinString);
+}
+reverseString('hello')
+
 
 
 
