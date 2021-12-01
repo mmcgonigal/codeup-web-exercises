@@ -134,9 +134,13 @@ let score3=300;
 function bowlingScoreAvr(score1,score2,score3){
    let scrAvr= ((score1+score2+score3)/3)
     console.log(scrAvr)
+    return scrAvr;
 }
 bowlingScoreAvr(100,200,300);
-let bestScore = 150
+
+var bestScore = 150
+
+
 function bowlingBestScore(bestScore){
     if (bestScore%3===0 || bestScore%5===0){
         return true;
@@ -145,15 +149,20 @@ function bowlingBestScore(bestScore){
     }
 }
 console.log(bowlingBestScore(bestScore));
+
+
 function bowlingName(str){
     let name = str.toLowerCase();
-    console.log(name);
+    console.log(name)
+    return name;
 }
 bowlingName("ThEbEsTbOwLiNgPlAcEever");
 let score = 109;
 let name = "bowling is fun";
 let isBowlingfun =true;
 let players = ["Tom","Jerry","Garfield"];
+
+
 function typeOfVar(input){
     console.log(typeof input)
 }
@@ -162,18 +171,21 @@ typeOfVar(name);
 typeOfVar(isBowlingfun);
 typeOfVar(players);
 
+
+//
 // function allIn(){
 //    console.log(bowlingScoreAvr(score1,score2,score3));
 //    console.log(bowlingBestScore(bestScore));
 //    console.log(bowlingName(str));
 //    console.log(typeOfVar(input));
+//
+//
+// allIn()
 
+function myFunction(firstName,lastName){
+    return firstName + lastName
 }
-allIn()
-// let myFunction(firstName,lastName){
-//     return firstName + lastName
-// }
-// myFunction("Mina","McGonigal")
-//
-// //function thatsNotMyName(name){ if(name = "Laura"){ return "that's me!, I'm " + "name"} } else { return "that's not my name" }
-//
+myFunction("Mina","McGonigal")
+
+//function thatsNotMyName(name){ if(name = "Laura"){ return "that's me!, I'm " + "name"} } else { return "that's not my name" }
+
