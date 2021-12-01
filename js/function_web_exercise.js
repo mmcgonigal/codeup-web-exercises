@@ -90,8 +90,19 @@ function isTrue(a){
         console.log("False")
     }
 }
-console.log(isTrue(0))
+isTrue(true))
+function isFalse(b){
+    let type1 = Boolean(a);
+    if(!type1){
+        console.log(`${type1} is false ! `)
+    }else{
+        console.log(`${type1} is true`)
+    }
+}
+isFalse(null);
+function isTruthy(input5){
 
+}
 
 
 
