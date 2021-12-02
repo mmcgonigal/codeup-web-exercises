@@ -92,6 +92,9 @@ console.log(calculateTip(5,0.10))
 //     consol.log(total);
 // }
 // calculateTipPrompt((20))
+
+
+
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -120,9 +123,11 @@ food(" burger ", "pizza")
 
 //reverseString(string)
 function reverseString(str){
-    let splitString = str.split("");
+    let splitString = str.split(""); // this will split "hello" into ["h","e","l","l","o"]
+    console.log (splitString)
     let reverseString = splitString.reverse("");
-    let joinString = reverseString.join("");
+    console.log(reverseString) // this will reverse the order of index
+    let joinString = reverseString.join(""); // this will add each index to one string.
     console.log(joinString);
 }
 reverseString('hello')
