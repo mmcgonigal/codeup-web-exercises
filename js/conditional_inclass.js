@@ -178,14 +178,22 @@ typeOfVar(players);
 //    console.log(bowlingBestScore(bestScore));
 //    console.log(bowlingName(str));
 //    console.log(typeOfVar(input));
+//};
 //
-//
-// allIn()
+// allIn();
 
 function myFunction(firstName,lastName){
     return firstName + lastName
 }
 myFunction("Mina","McGonigal")
+//Mina McGonigal
 
-//function thatsNotMyName(name){ if(name = "Laura"){ return "that's me!, I'm " + "name"} } else { return "that's not my name" }
+//function thatsNotMyName(name){
+// if(name = "Laura"){
+// return "that's me!, I'm " + "name"
+// }else{
+// return "that's not my name"
+// }
 
+//thatsNotMyName("Laura"); // "that's me! I'm Laura"
+//thatsNotMyName("Mina"); // "that's not my name"
