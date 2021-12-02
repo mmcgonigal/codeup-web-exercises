@@ -192,14 +192,14 @@ var luckyNumber = Math.floor(Math.random() * 6);
 let playNumber= confirm("Do you want to play with number?") //true / false
 console.log("hi")
 if(playNumber){
-  let inputNumber=  Number( prompt ("Please type in your number! "))
-    if(isNaN(inputNumber)){
+  let inputNumber=  Number( prompt ("Please type in your number! ")) // if playNumber confirm is true activate prompt to input number
+    if(isNaN(inputNumber)){ //if input from prompt is not number ;
         alert("Invalid input")
-    }else {
+    }else {        // this will be if the prompt is number,
 
-        oddEven(inputNumber)
-        alert(inputNumber + 100)
-        if (inputNumber > 0) {
+        oddEven(inputNumber) // first activate function called oddEven with the number from prompt ---> line 213
+        alert(inputNumber + 100) // shows prompt input number + 100
+        if (inputNumber > 0) {   // after +100 , it checks to see if the number is positive or negative integer .
             alert("This is Positive")
         } else if(inputNumber<0) {
             alert("This is negative")
@@ -210,9 +210,9 @@ if(playNumber){
 }else{
     alert("Invalid input")
 }
-function oddEven (inputNumber){
-    if(inputNumber%2==0){
-        alert("That is even number!")
+function oddEven (inputNumber){  //when user put a number on prompt, first thing it does is this function
+    if(inputNumber%2==0){           //to see if it is odd number or even number. do below , when function is done,
+        alert("That is even number!")    // next it goes to activate code on ------->line 201
 
     }else if (inputNumber%2!==0){
         alert("That is odd number")
