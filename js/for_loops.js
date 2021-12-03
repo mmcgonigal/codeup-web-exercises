@@ -122,18 +122,18 @@ do {
 // correct password is given.
 
 
-// var truePassword = "asdf"
-// function passwordInput(){
-//     // asking password
-//     let password= prompt("please enter password")
-//          while (password !== truePassword) {
-//              alert("Invalid Password")
-//              prompt("Try again.")
-//              }
-//              alert("you have entered right password")
-//         }
-//
-// passwordInput()
+var truePassword = "asdf"
+function passwordInput(){
+    // asking password
+    let password= prompt("please enter password")
+         while (password !== truePassword) {
+             alert("Invalid Password")
+            password= prompt("Try again.")
+             }
+             alert("you have entered right password")
+        }
+
+passwordInput()
 
 
 //let correctPass = "secret"
@@ -157,8 +157,8 @@ for(let counter = 1; counter <=5; counter ++) {
 //=====================Laura's example !
 
 //
-//=============================================================================
-//Exercise.
+//=================================================================================================EXERCISE=============
+//
 // Create a function named showMultiplicationTable that accepts a number and console.logs
 // the multiplication table for that number (just multiply by the numbers 1 through 10)
 
@@ -170,6 +170,10 @@ function showMultiplicationTable(){
     }
 }
 showMultiplicationTable();
+
+
+
+
 //looping 0-10
 
 // Use a for loop and the code from the previous lessons
@@ -217,9 +221,9 @@ for (let i=0; i<=9; i++) {
     console.log(a)
 }
 //Create a for loop that uses console.log to create the output shown below.100 95 90 85 ......5
-for(let i = 100; i> 0; i-=5){
-    console.log(i)
-}
+// for(let i = 100; i> 0; i-=5){
+//     console.log(i)
+// }
 
 
 
