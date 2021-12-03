@@ -32,6 +32,42 @@ for ( let i = 0 ; i < ages.length ; i++){
 }
 
 
+let samsDogs=["blue","luna","scamp"];
+console.log("before", samsDogs)
+samsDogs.unshift("spot")  // add to front
+console.log("after unshift", samsDogs);
+samsDogs.push("rex") //  add to the last
+console.log("after push", samsDogs)
+console.log("removing last index")
+console.log("after pop",samsDogs)
+samsDogs.pop();
+console.log("after shift")
+samsDogs.shift();
+console.log((`fetching index of luna`))
+console.log("luna's index", samsDogs.indexOf("luna"))
+
+console.log(samsDogs.reverse());
+let numbers = [4,3,45,63,221,23]
+let searchTerm = "soup, tomato, no-garlic,1hour"
+let parseSearchTerm = searchTerm.split("")
+console.log("Parsed Search Term", parseSearchTerm)
+
+
+let fruits=["apple","banana","strawberry"]
+let fruits2= ["coconut","watermelon"]
+let basket = fruits.concat(fruits2)
+console.log(basket)
+let num1=[1,2,3,4,5]
+let num2=[6,7,8,9]
+num3=num1.concat(num2)
+console.log(num3)
+
+
+
+
+
+
+
 
 
 
