@@ -4,18 +4,53 @@
 //Use a loop and the continue statement to output all the odd numbers between 1 and 50,
 // except for the number the user entered.
 
-let NotOddNumber=prompt("please input odd number between 1 and 50");
-let correctOddNumber = NotOddNumber%2
-while(!NotOddNumber){
-    alert("That is not odd number!")
-    prompt("Please tyr again")
+//prompt("put a number between 1- 50 and odd  number "
+// " what if it is string ", "what if it is out of range", " what if it is not odd number "
+// I have to think about all the option of user input.
+let userInput=0
+do {
+    userInput = prompt("Please type odd number between 1 and 50!")
+    if(userInput < 0 || userInput > 50){
+        alert("That number is not in range")
+    } else if( userInput=== isNaN){
+        alert("That is not a number")
+    }else if( userInput % 2 === 0) {
+        alert("That is not odd number")
+    } else {
+        alert("You finally input odd number")
+        break;
+    }
+}
+while(true);
+
+//Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
+
+//use for loop
+
+for(let i = 1; i < 50; i+=2) {
+    let skipNumber = 27
+    if (i === skipNumber){
+        console.log("Yikes ! skipping Nuber : " + skipNumber)
+        continue;
+    }
+    console.log("Here is ODD NUMBER : " + i)
 }
 
-alert("Good job!")
 
 
 
-console.log("Number to skip is")
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
