@@ -36,10 +36,23 @@ for(let i = 1; i < 50; i+=2) {
     console.log("Here is ODD NUMBER : " + i)
 }
 
-//random number from 50 -100
+// This is how you get a random number between 50 and 100
 var allCones = Math.floor(Math.random() * 50) + 50;
-//
+// This expression will generate a random number between 1 and 5
 
+do {
+    var clientRequest = Math.floor(Math.random() * 5) + 1;
+    if (allCones >= clientRequest) {
+        console.log(`I just sold ${clientRequest} cones .`)
+        allCones -= clientRequest;
+    }else if ( allCones < clientRequest ){
+        console.log(clientRequest);
+        console.log ("Sorry i dont have enough icedream...")
+    } else {
+        console.log(" YAY !! SOlD OUT ! I'm going home !!")
+    }console.log (allCones)
+
+} while (allCones > 0)
 
 
 
@@ -94,16 +107,16 @@ var allCones = Math.floor(Math.random() * 50) + 50;
 //
 // //===========do while =====
 //
-// var allCone = math.floor(math.random() * 50) + 50;
-// do {
-//     var conesToPurchase = Math.floor(Math.random() * 5) + 1;
-//
-//     if (conesToPurchase <= allCones) {
-//         console.log(conesToPurchase + "cones sold......")
-//         allCone -= conesToPurchase
-//     }else{
-//         console.log("cannot sell you" + conesToPurchase + "cones I only have" + allCone +"...." )
-//     }
-//     console.log(allCone)
-// }while(allCone > 0)
-// console.log ("all cones are gone.")
+var allCone = math.floor(math.random() * 50) + 50;
+do {
+    var conesToPurchase = Math.floor(Math.random() * 5) + 1;
+
+    if (conesToPurchase <= allCones) {
+        console.log(conesToPurchase + "cones sold......")
+        allCone -= conesToPurchase
+    }else{
+        console.log("cannot sell you" + conesToPurchase + "cones I only have" + allCone +"...." )
+    }
+    console.log(allCone)
+}while(allCone > 0)
+console.log ("all cones are gone.")
