@@ -135,7 +135,7 @@ function passwordInput(){
 
 passwordInput()
 
-
+// Laura 's example ::: ===============================
 //let correctPass = "secret"
 // let input = prompt ("what is the password?")
 // while (input !== correctPass){

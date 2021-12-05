@@ -12,7 +12,7 @@ do {
     userInput = prompt("Please type odd number between 1 and 50!")
     if(userInput < 0 || userInput > 50){
         alert("That number is not in range")
-    } else if( userInput=== isNaN){
+    } else if(isNaN(userInput)){  //******** remember !!!!!!!! isNaN is a function to determine whether NaN or not !!!!!!!!! ***********
         alert("That is not a number")
     }else if( userInput % 2 === 0) {
         alert("That is not odd number")
@@ -36,8 +36,9 @@ for(let i = 1; i < 50; i+=2) {
     console.log("Here is ODD NUMBER : " + i)
 }
 
-
-
+//random number from 50 -100
+var allCones = Math.floor(Math.random() * 50) + 50;
+//
 
 
 
