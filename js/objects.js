@@ -11,11 +11,12 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-    // var person = {
-    //     firstName: "Mina",
-    //         lastName: "McGonigal",
-    // }
-    // console.log(person.firstName)
+    var person = {
+        firstName: "Mina",
+            lastName: " McGonigal",
+    }
+    console.log(person.firstName);
+    console.log(person.lastName);
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -25,14 +26,10 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-    var person = {
-        firstName : "Mina",
-        lastName : "McGonigal",
-        sayHello : function(){
-            console.log ("Hello from " + this.firstName + this.lastName + "!")  //sayHello(){
-        }                                                                           //console.log(" Hello from " +person.firstName + person.lastName + "!")
+    person.sayHello= function(){
+        return " Hello from" +" " + this.firstName + " "+this.lastName + "!"
     }
-    person.sayHello()
+    console.log(person.sayHello())
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -51,31 +48,21 @@
     var shoppers = [
         {name: 'Cameron', amount: 180},
         {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
+        {name: 'George', amount: 320},
     ];
-    shoppers.forEach(function(shopper){
+    shoppers.forEach(
+        function(shopper){
         if(shopper.amount > 200){
             console.log("Hello, " + shopper.name + " you are getting a discount! your total will be "
-                + shopper.amount - (shopper.amount * 0.12) )
+                + (shopper.amount - (shopper.amount * 0.12)) )
         }else{
             console.log(" Hello , Fellow Shopper," + shopper.name +
                 " You didn't spend enough money to get discount!")
         }
-    });
+        }
+    );
 
-// function discount(arr){
-//    if(arr.name.amount > 200){
-//     return {
-//         name: name,
-//         totalAmount: this.amount-(this.amount*0.12),
-//     }
-//     }else{
-//        return{
-//            name: name,
-//            totalAmount: this.amount,
-//        }
-//    }
-//     }
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -89,7 +76,49 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+    var books = [
+        {
+            title: "Horton hears a who",
+            author: {
+                firstName: "Theodor",
+                lastName: "Seuss",
+            },
+        },
+        {
+            title: "Pride and Prejudice",
+            author: {
+                firsName: "Jane",
+                lastName: "Austin",
+            },
+        },
+        {
+            title: "Harry Potter",
+            author: {
+                firstName: "J.K",
+                lastName: "Rolling",
+            },
+        },
+        {
+            title: "coding for dummy",
+            author: {
+                firstName: "Laura",
+                lastName: "Luiz",
+            },
+        },
+        {
 
+            title: "How to code?!",
+            author:{
+                firstName: "Sam",
+                lastName: "Moore",
+            },
+        },
+]
+    // var books = [
+    //     {title : "Outliers", author: { firstName: "Malcom", lastName: "Gladwell"}},
+    //     {title: "Green Eggs and Ham", author: { firstName: "Dr.", lastName: "Seuss"}},
+    //     {title: "HELLO WORLD", author: {firstName: "Justin", lastName:  "Conger"}}
+    // ];
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -114,7 +143,11 @@
      *      ---
      *      ...
      */
-
+books.forEach(
+    function(book,index){
+        console.log(` Number ${index +1}  book's title is ${book.title} and author name is ${book.author.firstName} ${book.author.lastName}`)
+    }
+)
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -125,5 +158,21 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+    function createBook(titleofBook,author_firstName,author_lastName) {
+        return {
+            title: titleofBook,
+            author: {
+                firstName: author_firstName,
+                lastName: author_lastName,
+            },
+        }
+    }
+    // this function returns an object.
+    //console.log(createBook("GDT","Stig","Larson"))
+    //books.push(createBook("GDT","Stig","larson"))
+
+
+
+
 
 })();
