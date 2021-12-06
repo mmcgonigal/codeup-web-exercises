@@ -34,7 +34,7 @@ for (let i =3; i<15; i++){
 
 
 for (let i=0; i <=20; i++){
-    if(i%2 !==0){
+    if(i % 2 !==0){
         continue;       //continue =  it doesnt get out of iteration ,continue to next iteration
     }
     console.log("Here is a lovely even number:  "+ i)
@@ -221,11 +221,149 @@ for (let i=0; i<=9; i++) {
     console.log(a)
 }
 //Create a for loop that uses console.log to create the output shown below.100 95 90 85 ......5
-// for(let i = 100; i> 0; i-=5){
-//     console.log(i)
-// }
+for(let i = 100; i> 0; i-=5){
+    console.log(i)
+}
+// ===========================================================EXTRA EXERCISE FROM LAURA.
+// Also if you get stuck follow this pattern:
+//  re-read the question and try breaking it down into pseudo-code (before you write any code)
+// console.log any values that you’re not sure about
+// the second you get stuck, turn on a 20' timer. if you are still stuck after the 20' … take a break
+// find the key words that you know of and do some googling
+// ask for help from us, your peers, alumni, ta’s, fellows, developer friends, etc.
 
 
+
+// 1. SUM OF POSITIVE NUMBERS
+// write a program to find the sum of positive numbers
+// if the user enters a negative numbers, the loop ends
+// the negative number entered is not added to sum
+// hint: think about what is returned from a prompt
+// hint: break it down and then if you want, wrap it into a function
+let userInput = 0
+userInput = prompt("put 2 numbers with ,")
+
+    function stringToNumber(str){
+        str=str.split(',')
+        let m = Number(str[0]);
+        let k = Number(str[1]);
+        console.log(m);
+        console.log(k);
+       }
+       stringToNumber(userInput)
+
+
+
+
+
+
+
+
+
+
+// do{
+//     function addArr (a,b) {
+//         if (a > 0 && b > 0) {
+//             let answer = a + b;
+//             console.log(answer);
+//         } else if( isNaN(a) || isNaN(b))  {
+//             alert ("That is invalid input");
+//
+//         }
+//         console.log(addArr(splitNumber()))
+//     } while(true)
+
+
+
+//=================2. FIZZ BUZZ
+// Write a program that prints the numbers 1 to 100. But for multiples of three,
+// print "fizz" instead of the number and  for any multiples of five print "buzz instead of the number.
+// Numbers that are multiples of both three and five, print "fizzbuzz"
+ for (let i = 1; i <= 100; i++){
+     if(i % 3 === 0){
+         console.log("fizz")
+         continue;
+     }else if(i % 5 === 0){
+         console.log("buzz")
+         continue;
+     // }else if(i % 3 === 0 && i % 5 === 0){
+     //     console.log("fizz buzz")
+     //     continue;
+     }else{
+         console.log (i)
+         continue;
+     }
+ }
+ //==============================================================trouble with 15 cant figure out, tried  1 % 15 ===0 as well...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     3. TREE WITH STARS
+// // write a program that results in the following display:
+//
+// *
+// * *
+// * * *
+// * * * *
+// * * * * *
+
+
+for(let i = 0; i < 10; i++){
+     let a = ''
+    for(let k = 0; k < i; k++){
+        a+="*"
+    }
+    console.log(a)
+}
+// I am not sure why this is undefined??!!
+
+
+
+
+
+
+
+
+
+// ---
+//     4. Given the animals array (see below)
+// // write a program that accepts an array which returns the following for each element in the array when passed in the animals array:
+
+// // should return:
+// "🐸 is my favorite animal"
+// "🦁 is my favorite animal"
+// "🐵 is my favorite animal"
+// "🐳 is my favorite animal"
+// "🐕 is my favorite animal"
+// "🦜 is my favorite animal"
+let animals = ["🐸","🦁","🐵","🐳","🐕","🦜"]
+function favoriteAnimal (arr){
+    for(let i = 0; i < arr.length; i++){
+        console.log(`${arr[i]}  is my favorite animal`)
+    }
+}
+favoriteAnimal(animals)
 
 
 
