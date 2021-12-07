@@ -8,9 +8,12 @@
         getArea: function () {
             // TODO: complete this method
             // hint: area = pi * radius^2
-            this.area = pi * this.radius**2
 
-            return; // TODO: return the proper value
+            area : pi * this.radius**2,
+            console.log(area)
+            return {
+                area : value
+            } // TODO: return the proper value
         },
 
         logInfo: function (doRounding) {
