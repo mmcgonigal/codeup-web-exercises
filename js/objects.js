@@ -172,7 +172,7 @@ books.forEach(
     //books.push(createBook("GDT","Stig","larson"))
 })();
 
-//================SELF practice
+//================SELF practice,
 
 let heroes = [
     {name:"captain America",
@@ -202,14 +202,15 @@ function createHero(nameOfHero,genderOfHero,weaponOfHero){
     heroes.push(newHero)
 }
 
-// createHero("black widow","female","chitauri")
+createHero("black widow","female","chitauri")
 
 //heroes.push(newHero);// assigned variable and then put it ?!
                         // if i want to make it
 //heroes.push("black widow","female","chitauri")  - if i want to add this way, should i put function in the object{}?
 console.log(heroes)
 
-heroes.forEach(function(hero){  // index parameter ?!
+heroes.forEach(function(hero){  // index parameter = dont really need many.
+                                                                    //singular of object is good or element is good enough.
     if(hero.gender==="female"){
         console.log(`${hero.name} is one of my favorite hero and ${hero.name} 's weapon is ${hero.weapon}`)
     }else{
