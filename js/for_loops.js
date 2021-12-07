@@ -240,61 +240,61 @@ for(let i = 100; i> 0; i-=5){
 // the negative number entered is not added to sum
 // hint: think about what is returned from a prompt
 // hint: break it down and then if you want, wrap it into a function
-let userInput = 0
-userInput = prompt("put 2 numbers with ,")
-
-    function stringToNumber(str){
-        str=str.split(',')
-        let m = Number(str[0]);
-        let k = Number(str[1]);
-        console.log(m);
-        console.log(k);
-       }
-       stringToNumber(userInput)
-
-
-
-
-
-
-
-
-
-
-// do{
-//     function addArr (a,b) {
-//         if (a > 0 && b > 0) {
-//             let answer = a + b;
-//             console.log(answer);
-//         } else if( isNaN(a) || isNaN(b))  {
-//             alert ("That is invalid input");
 //
+//     function stringToNumber() {
+//
+//         userInput = prompt("put 2 numbers with ,")
+//
+//         userInput = userInput.split(',')
+//         let m = Number(userInput[0]);
+//         let k = Number(userInput[1]);
+//         if (m < 0 || k < 0) {
+//             stringToNumber()
+//         } else {
+//             console.log(m);
+//             console.log(k);
+//             return m + k;
 //         }
-//         console.log(addArr(splitNumber()))
-//     } while(true)
+//     }
+//        stringToNumber(userInput)
+
+//
+function stringToNumber() {
+var m;
+var k;
+    do {
+
+        userInput = prompt("put 2 numbers with ,")
+
+        userInput = userInput.split(',')
+         m = Number(userInput[0]);
+         k = Number(userInput[1]);
 
 
+    } while (m < 0 || k < 0)
+    return m + k
+}
 
 //=================2. FIZZ BUZZ
 // Write a program that prints the numbers 1 to 100. But for multiples of three,
 // print "fizz" instead of the number and  for any multiples of five print "buzz instead of the number.
 // Numbers that are multiples of both three and five, print "fizzbuzz"
  for (let i = 1; i <= 100; i++){
-     if(i % 3 === 0){
-         console.log("fizz")
+     if(i % 3 === 0 && i % 5 === 0){
+         console.log("fizz buzz")
          continue;
      }else if(i % 5 === 0){
          console.log("buzz")
          continue;
-     // }else if(i % 3 === 0 && i % 5 === 0){
-     //     console.log("fizz buzz")
-     //     continue;
+     }else if(i % 3 === 0){
+         console.log("fizz")
+         continue;
      }else{
          console.log (i)
          continue;
      }
  }
- //==============================================================trouble with 15 cant figure out, tried  1 % 15 ===0 as well...
+
 
 
 

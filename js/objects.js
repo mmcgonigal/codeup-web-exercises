@@ -170,9 +170,52 @@ books.forEach(
     // this function returns an object.
     //console.log(createBook("GDT","Stig","Larson"))
     //books.push(createBook("GDT","Stig","larson"))
-
-
-
-
-
 })();
+
+//================SELF practice
+
+let heroes = [
+    {name:"captain America",
+    gender:"male",
+    weapon:"shield",
+    },
+    {name:"ironman",
+    gender:"male",
+    weapon:"omnibeam",
+    },
+    {name:"thor",
+    gender:"male",
+    weapon:"hammer",
+    },
+    {name: "hawk eye",
+    gender: "male",
+    weapon:"arrow",
+    },
+]
+console.log (heroes[2])
+function createHero(nameOfHero,genderOfHero,weaponOfHero){
+    let newHero= {
+        name:nameOfHero,
+        gender:genderOfHero,
+        weapon:weaponOfHero,
+    }
+    heroes.push(newHero)
+}
+
+// createHero("black widow","female","chitauri")
+
+//heroes.push(newHero);// assigned variable and then put it ?!
+                        // if i want to make it
+//heroes.push("black widow","female","chitauri")  - if i want to add this way, should i put function in the object{}?
+console.log(heroes)
+
+heroes.forEach(function(hero){  // index parameter ?!
+    if(hero.gender==="female"){
+        console.log(`${hero.name} is one of my favorite hero and ${hero.name} 's weapon is ${hero.weapon}`)
+    }else{
+        console.log(`${hero.name} is one of marvel heroes `)
+    }
+
+})
+
+function heroesInfo()
