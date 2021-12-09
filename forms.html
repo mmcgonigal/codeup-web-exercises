@@ -8,30 +8,34 @@
         <title>Register With US</title>
     </head>
     <body>
-        <label for="username">Email Address</label>
-        <input id="username" name="username" type="text" placeholder="email address please">
-        <label for="password">Password</label>
-        <input id="password" name="password" type="password"><br>
-        <textarea id="bio" name="bio">Please tell us about yourself</textarea><br>
-        <p>How did you hear about us? choose up to 4</p>
-        <label>
-            <input type="radio" name="Q1" value=" billboard">
-            Billboard
-        </label>
-        <label>
-            <input type="radio" name="Q2" value="radio advertisement">
-            Radio Advertisement
-        </label>
-        <label>
-            <input type="radio" name="Q3" value="internet advertisement">
-            Internet Advertisement
-        </label>
-        <label>
-            <input type="radio" name="Q4" value="others">
-            Others
-            <label for="detail source"></label>
-            <input id="detail source" name="detail source" type="text" placeholder="Please be specific">
-        </label>
+          <form method="POST" action="https://request-inspector.glitch.me/">
+                <article>
+                    <label for="username">Email Address</label>
+                    <input type="text" name="username" id="username" placeholder="email address please"><br><br>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" ><br><br>
+                    <textarea id="bio" name="bio" cols="40" rows="10">Please tell us about yourself </textarea><br>
+               </article>
+               <article>
+                   <label>
+                       <p>How did you hear about us? choose up to 4</p>
+                   </label>
+                       <input type="radio" name="Q1" value=" billboard">Billboard</label>
+                       <label>
+                           <input type="radio" name="Q2" value="radio advertisement">
+                           Radio Advertisement
+                       </label>
+                       <label>
+                           <input type="radio" name="Q3" value="internet advertisement">
+                           Internet Advertisement
+                       </label>
+                       <label>
+                           <input type="radio" name="Q4" value="others">
+                           Others
+                           <label for="detail source"></label>
+                           <input id="detail source" name="detail source" type="text" placeholder="Please be specific" rows="1" cols="1">
+                       </label>
+               </article>
         <br><br><br>
         <label for="web browser">Select a web browser you use!</label>
         <select id="web browser" name="web browser">
@@ -40,6 +44,8 @@
             <option>Edge</option>
         </select>
         <button type="submit">Submit</button>
-
+        </section>
+        </form>
     </body>
+
 </html>
