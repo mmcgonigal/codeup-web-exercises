@@ -3,19 +3,26 @@
 /*tag name-will get applied to ALL of that tag*/
 p{
     color:white;
-    font-family: "Comic Sans MS"
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px
+
 }
 /* "#"id value - applied to only the element with that unique id value */
 #fancy-header{
-    color: #C54267
+    color:#DEA01E;
+    text-align: center;
+    text-decoration: underline;
+
 }
 /* "."classValue - apply all element with that class name */
 .purple{
-    color: white
+    color: #DBF2FF
     border: dotted whitesmoke 5px ;
 }
 body{
-    background-image: linear-gradient(to bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    background-image: linear-gradient(to left bottom, #845ec2, #0078d1, #0086c1, #008d9f, #008f7a);
+    /*background-image: url(../assets/ocean.jpg)*/
+           /*;*/
 }
 h2{
     color : antiquewhite;
