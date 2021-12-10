@@ -5,7 +5,6 @@ p{
     color:white;
     font-family: 'Indie Flower', cursive;
     font-size: 40px
-
 }
 /* "#"id value - applied to only the element with that unique id value */
 #fancy-header{
@@ -26,11 +25,34 @@ body{
 }
 h2{
     color : antiquewhite;
+    font-family: Changa;
+}
+.philosophy li{
+    font-family: "Indie Flower";
+    font-size:20px;
+    font-color:#C34A36;
+
 }
 /*selector{
     property: value;
     property: value;
     property: value;
  */
+.salesInfo{
+    font-family:"changa";
+    padding: 10px 20px 20px 10px;
+}
+#productDetail{
+    font-color:#845EC2;
+    font-size: 30px;
+}
+a :hover{
+    color:blue;
+}
+a :visited{
+    color: red;
+}
+
+
 
 
