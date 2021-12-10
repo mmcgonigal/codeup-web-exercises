@@ -1,0 +1,29 @@
+
+/* 1. identify the element you want to style */
+/*tag name-will get applied to ALL of that tag*/
+p{
+    color:white;
+    font-family: "Comic Sans MS"
+}
+/* "#"id value - applied to only the element with that unique id value */
+#fancy-header{
+    color: #C54267
+}
+/* "."classValue - apply all element with that class name */
+.purple{
+    color: white
+    border: dotted whitesmoke 5px ;
+}
+body{
+    background-image: linear-gradient(to bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+h2{
+    color : antiquewhite;
+}
+/*selector{
+    property: value;
+    property: value;
+    property: value;
+ */
+
+
