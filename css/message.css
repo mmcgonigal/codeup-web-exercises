@@ -1,0 +1,45 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+[class *="info"]{
+    color: #262671;
+    background: #8f9aec;
+    padding:5px;
+    border:1px solid lightgray;
+    border-radius: 5px;
+    margin: 10px;
+
+
+}
+[class *="success"]{
+    color: green;
+    background: #a6e8d8;
+    padding:5px;
+    border:1px solid lightgray;
+    border-radius: 5px;
+    margin: 10px
+
+}
+[class *="warning"]{
+    color: #ea9f11;
+    background: #F0ED90;
+    padding:5px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 10px;
+
+}
+[class *="error"]{
+    color: red;
+    background: #F4849A;
+    padding: 5px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 10px;
+
+
+}
