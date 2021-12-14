@@ -35,7 +35,7 @@ h2, h3 {
     background: white;
     padding: 1em;
     margin: 0 auto;
-    flex-direction: column;
+
 
 
 
@@ -44,7 +44,8 @@ h2, h3 {
 
 section {
     display: flex;
-    margin : 10px 0 ;
+    margin: 10px
+
 
 
 
