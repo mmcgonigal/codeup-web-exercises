@@ -27,7 +27,6 @@ a {
 }
 .top-nav {
     background: var(--light-bg);
-
     width: 100%;
     position: fixed;
     z-index: 1000;
