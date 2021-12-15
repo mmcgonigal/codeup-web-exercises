@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0
+}
+nav{
+    background : #848487;
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/*styling for anchors*/
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+
+
+a :hover{
+    color: red;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    font-family: 'Work Sans', sans-serif;
+    padding: 1em;
+}
+
+
+/*logo text*/
+#logo{
+    font-size: 2em;
+    padding: 0.2em 0;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: bolder;
+    flex-basis: 25%
+    position: relative;
+    margin: auto;
+}
+
+.right{
+    display: flex;
+    justify-content: space-between;
+
+}
