@@ -3,53 +3,69 @@
 }
 body {
     background-image: url("../assets/cool-background.png");
+    /*color:#5A00A5 #137AFC*/
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 0;
+    /*margin: 0;*/
     min-height: 100vh;
+    /*width: 100%;*/
 /*    reading material says it is to keep footer at the bottom??*/
 }
 nav{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse;
+/*ul and image change the order*/
 }
+
 #logo {
-    width: 150px;
-    height: 150px;
+    width: 400px;
+    height: 200px;
     border-radius: 50px;
     border: lightblue 2px solid;
     margin-top: 20px;
+    align-self: center;
+/*    put img to center by itself without moving ul*/
+
 }
-
-
 
 nav ul {
-    display: flex;
+
     list-style-type: none;
-    align-items: flex-end;
-    margin-bottom: 80px;
+    align-content: space-between;
+    justify-content: flex-end;
+    /*this put all ul list to right side of screen*/
+    display: flex;
+
+
+
 }
+
 nav ul a {
     text-decoration: none;
-    color: #E9EFFF;
+    color: #C2A875;
 }
+
 .withpadding{
-    padding:0 50px 0 50px;
+    /*padding:0 50px 0 50px;*/
 }
 /*right side nav bar , give them space */
-
-h1{
-    position:relative;
-    left: 45%;
-
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+h1{
+    /*position:relative;*/
+    /*left: 45%;*/
+}
+
 button {
-    position: relative;
-    left: 48%;
     background-color: #C2A875;
     border-radius: 2em;
     padding: 0.3em 1.2em;
     font-weight: 300;
+    height: 3em;
 }
 /*    not sure about display:inline-block ,
 not sure about box-sizing:border-box    */
@@ -59,27 +75,55 @@ because button was not placed in middle?!*/
 footer{
     display: flex;
     flex-direction: column;
+    margin-top: 250px;
 }
+
 .footer1{
     display: flex;
-    justify-content: space-around;
-    align-items: baseline
+    justify-content: space-evenly;
+    align-items: baseline;
+    position: relative;
+    bottom: -50px;
 }
+
 .footer1  li,.footer2  li{
     list-style-type: none;
 }
 
-.footer1 a,.footer2 a{
+footer ul a{
     text-decoration: none;
+    color: #FFE9FF;
+
 }
+
 #companyName{
-    margin-right: 20em
+    margin-right: 15em;
+    font-size: 2em;
+    color: #005B49;
 }
+
 .footer2{
     display: flex;
-    justify-content: space-around;
-    align-items: baseline
+    /*align-items: flex-end;*/
+
+    justify-content: space-between;
+    /*align-items: baseline;*/
 }
+
 #contact{
-    margin-right:60px
+    margin-right:19em;
+    margin-left: 16px;
+    font-size:16px;
 }
+/*.footer2 li{*/
+/*    margin-right: 15px;*/
+/*}*/
+@media screen and (min-width: 300px) and
+(max-width: 375px ){
+    nav ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
