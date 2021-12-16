@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-image: url("../assets/cool-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    min-height: 100vh;
+/*    reading material says it is to keep footer at the bottom??*/
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+#logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50px;
+    border: lightblue 2px solid;
+    margin-top: 20px;
+}
+
+
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: flex-end;
+    margin-bottom: 80px;
+}
+nav ul a {
+    text-decoration: none;
+    color: #E9EFFF;
+}
+.withpadding{
+    padding:0 50px 0 50px;
+}
+/*right side nav bar , give them space */
+
+h1{
+    position:relative;
+    left: 45%;
+
+}
+button {
+    position: relative;
+    left: 48%;
+    background-color: #C2A875;
+    border-radius: 2em;
+    padding: 0.3em 1.2em;
+    font-weight: 300;
+}
+/*    not sure about display:inline-block ,
+not sure about box-sizing:border-box    */
+
+/*could not group button with h1,
+because button was not placed in middle?!*/
+footer{
+    display: flex;
+    flex-direction: column;
+}
+.footer1{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline
+}
+.footer1  li,.footer2  li{
+    list-style-type: none;
+}
+
+.footer1 a,.footer2 a{
+    text-decoration: none;
+}
+#companyName{
+    margin-right: 20em
+}
+.footer2{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline
+}
+#contact{
+    margin-right:60px
+}
