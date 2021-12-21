@@ -126,4 +126,12 @@ footer ul a{
         align-items: center;
     }
 }
+@media screen and (min-width : 300px) and
+<max-width: 375px){
+    .footer1 {
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+}
 
