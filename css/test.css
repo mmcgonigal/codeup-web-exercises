@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+}
+h2{
+    color: orange;
+    background-color: pink;
+}
+main p{
+    color: blue;
+    border: solid 1px blue;
+}
+p{
+    color: #005B49;
+}
+.bold{
+    font-weight: bold;
+}
