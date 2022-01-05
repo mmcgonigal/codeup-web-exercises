@@ -1,0 +1,16 @@
+.pizza__img__header{
+    background-image: url("../assets/pizza.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 50px;
+    text-align: center;
+
+}
+.head__line {
+    width: 100%;
+    background-color: white;
+
+}
+
+

@@ -87,9 +87,6 @@ footer>p{
 }
 #social-media-links i{
     color: var(--color-light-blue);
-
-
-
 }
 #social-media-links i:hover{
     color: var(--color-dark-grey);
