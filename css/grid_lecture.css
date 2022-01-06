@@ -1,0 +1,17 @@
+.container{
+    border: solid 1px red;
+}
+.row{
+    border: solid 1px lightcoral;
+}
+.col-md{
+    border: solid 1px lightblue;
+    background-color: yellow;
+}
+div{
+    margin: 1em;
+}
+.row{
+    background-color: thistle;
+}
+
