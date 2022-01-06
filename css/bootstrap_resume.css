@@ -1,0 +1,36 @@
+:root{
+    /*color*/
+    --color-green: #357A5E ;
+    --color-light-green: #CCFBE5;
+    --clolr-blue: #0076A8;
+    --color-dark-grey: #4d4d4d;
+    --color-dark-blue: #0052B6;
+/*font weight*/
+    --font-bold: 700;
+/*    font size*/
+    --font-size-large:700;
+    --font-size-medium:500;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-dark-grey);
+}
+.name{
+    font-weight:var(--font-bold);
+}
+
+hr{
+    border: var(--color-green) 2px solid;
+}
+i{
+    color: var(--color-light-green);
+    font-size: 1em;
+    transition: all ease 300ms;
+}
+.contact:hover i{
+    color: var(--color-dark-grey);
+    transform: scale(1.5) rotate(+30deg)
+}
+.content>h2{
+    color: var(--color-blue);
+}
