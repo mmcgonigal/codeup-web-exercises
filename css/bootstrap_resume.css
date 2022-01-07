@@ -15,22 +15,12 @@ body{
     font-family: 'Montserrat', sans-serif;
     color: var(--color-dark-grey);
 }
-.name{
-    font-weight:var(--font-bold);
-}
-
-hr{
-    border: var(--color-green) 2px solid;
-}
 i{
-    color: var(--color-light-green);
+    color: var(--color-green);
     font-size: 1em;
     transition: all ease 300ms;
 }
 .contact:hover i{
     color: var(--color-dark-grey);
     transform: scale(1.5) rotate(+30deg)
-}
-.content>h2{
-    color: var(--color-blue);
 }
