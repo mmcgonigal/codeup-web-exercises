@@ -183,15 +183,31 @@ console.log(matchLength(10,'hello'))
 
 
 // (CHALLENGE) Write a function that takes in a day of the week as a string and returns the number that matches the day of the week. 'Sunday' should return 1 and 'Saturday' should return 7.
-
-
+//
+// function dayToNumber(days){
+//     let day = {Sunday:1, Monday:2, Tuesday:3, Wednesday:4, Thursday:5, Friday:6, Saturday:7 };
+//     console.log (days[day]);
+// }
+// dayToNumber('Wednesday')
 
 
 // ========== + Loops
 
 // Write a function that takes in a string input and logs each character of the string separately
+function logString(input){
+    let arr= input.split('');
+    let i=0;
+    for(i = 0;  i<=arr.length; i++ ){
+        console.log (arr[i])
+    }
+};
+logString('apple');
+logString('banana');
 
 // Write a function that takes in a string and logs it 133 times
+function logOneThreeThreeTimes (input){
+
+}
 
 // Write a function that takes in a string input and logs the first character, then the first two characts, etc., until the full string is logged.
 
