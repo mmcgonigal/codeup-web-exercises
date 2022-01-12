@@ -26,11 +26,30 @@ var intervalId = setInterval(function () {
         count++;
         console.log('Repeating this line ' + count);
     }
-}, interval);
+}, interval)//1000;
+
+
+
+
+let intervalID=setInterval(function(){
+    if (count >= max){
+        clearInterval(intervalID)
+    }else{
+        count++;
+        console.log(`Repeating this line ${count}`)
+    }
+}, 1000)
+
+// setInterval(fn(),time);
+// setTimeout(fn(), time);
+
+
+
+
 
 //
-const tId = function showName(name){
-    console.log(name)
-}
-setTimeout(showName,2000, 'Mina');
-clearTimeout(tID)
+// const tId = function showName(name){
+//     console.log(name)
+// }
+// setTimeout(tID,2000, 'Mina');
+// clearTimeout(tID)
