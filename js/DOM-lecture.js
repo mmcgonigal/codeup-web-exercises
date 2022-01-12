@@ -59,7 +59,7 @@ button.onclick = handleClick
     //3-1 GET THE SPAN (or element) ,(id, class, tag name).
     //3-2 save the retrieved span to a variable.
     //3-3 change the inner contents of the span to the saved input variable
-//(prompAnswer)
+//(prompAnswer)‹›
 
 
 let promptAnswer = prompt('what is your name?');
