@@ -47,7 +47,7 @@ let btn1 = document.getElementById('one');
 let btn2 = document.getElementById('two');
 let btn3 = document.getElementById('three')
 
-let handle_Click = ()=>prompt("did you just click me?!");
+let handle_Click = (event)=>prompt("did you just click me?!");
 
 btn2.addEventListener('click',handle_Click);
 
@@ -58,3 +58,16 @@ btn2.addEventListener('click',()=>console.log("another event handler has been ad
 btn2.removeEventListener('click',handle_Click)
 
 
+
+
+
+
+//event (객체 object) .target
+
+let handle__Click = (event)=>console.log(event.target)
+
+btn1.addEventListener('click',handle__Click);
+btn2.addEventListener('click',handle__Click);
+btn3.addEventListener('click',handle__Click);
+
+// even if event handler is applied all same to all buttons, because of event.target ,I can tell which button had event by console.
