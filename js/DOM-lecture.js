@@ -1,10 +1,10 @@
 'use strict'
 
-//window.document  현재 브라우저에 랜더링 되고 있는 문서를 의미하며, 이 속성을 이영하면 해당 문서에 접근 가능 .
+//window.document  현재 브라우저에 랜더링 되고 있는 문서를 의미하며, 이 속성을 이용하면 해당 문서에 접근 가능 .
 //window. 은 생략 가능 !!
 //querySelector -valid css selector is required. 선택자와 일치하는 문서 내 첫번째 요소를 반환,
 //getElementById - element within the document ,
-//if n)o)t existing , return null.
+//if not existing , return null.
 
 console.log(document.querySelector('h1'));
 console.log(document.querySelector('p'));
