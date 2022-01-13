@@ -12,7 +12,7 @@
 
 //declare function which is going to be a event handler is called -----
 // < event handler register : 이벤트가 발생하면, 이 함수를 호출해라.
-// name of event handler -- handle어쩌고저쩌고
+// name of event handler -- handle 어쩌고저쩌고
 
 // var handleClick = function(){
 //     alert("welcome😽")} //event handler register.
@@ -20,7 +20,7 @@
 //const handleClick = () =>{alert("welcome😽")}
 // let button = document.querySelector("button")
 // button.onclick = handleClick
-//taret.on'event' = event handler function.
+//target.on'event' = event handler function.
 
 //basic form
 
@@ -71,3 +71,4 @@ btn2.addEventListener('click',handle__Click);
 btn3.addEventListener('click',handle__Click);
 
 // even if event handler is applied all same to all buttons, because of event.target ,I can tell which button had event by console.
+

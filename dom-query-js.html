@@ -15,7 +15,7 @@
     <li data-dbid="5">Item 5</li>
 </ul>
 <h2 id="sub-header">Hello Again.</h2>
-<p class="sub-paragraph">
+<p class="sub-paragraph" id="sub-para">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
     ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -24,6 +24,17 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
+<button id = "btn-one">BUTTON ONE</button>
+<button id = "btn-two">BUTTON TWO</button>
+<button id = "btn-three">BUTTON THREE</button>
+<button id = "btn-four">BUTTON FOUR</button>
+
+<!--&lt;!&ndash;//which element am i accessing?&ndash;&gt;-->
+<!--&lt;!&ndash;//how am i going to retrieve that element &#45;&#45;becomes target.&ndash;&gt;-->
+<!--&lt;!&ndash;&ndash;&gt;put it in variable box.&ndash;&gt;-->
+<!--&lt;!&ndash;//declare function -register event handler var xxxx&ndash;&gt;-->
+<!--&lt;!&ndash;//name of handler&ndash;&gt; handle-eventBlahBlah..&ndash;&gt;-->
+<!--//target.addEventListener("event" , event handler function)-->
 
 <script>
     (function() {
@@ -32,20 +43,36 @@
          var mainHeader = document.getElementById('main-header');
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML="JavaScript is Cool"
+
+        //mainHeader.innerHTML="JavaScript is Cool"
+
+        let btn1 = document.getElementById("btn-one")
+        function handleClickBtn1(){
+            mainHeader.innerHTML = "JavaScript is so cool!!😵‍💫☠️";
+        };
+        btn1.addEventListener('click',handleClickBtn1);
+
+
+
 
         // TODO: Uncomment the next line and get the sub header element by id
          var subHeader = document.getElementById('sub-header');
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.setAttribute("style","color: blue")
+
+        //subHeader.setAttribute("style","color: blue")
+
+        let btn2 = document.getElementById("btn-two");
+        let handleClickBtn2 = ()=>subHeader.setAttribute("style","color:blue");
+        btn2.addEventListener('click',handleClickBtn2);
 
 
         // TODO: Uncomment the next line and get all list items
-         var listItems = document.getElementsByTagName('li') ;
-        for(var i = 0; i <= listItems.length; i++){
+
+        let listItems = document.getElementsByTagName('li') ;
+        for(let i = 0; i <= listItems.length; i++){
             console.log(listItems[i])
-        };
+        }
 
         // TODO: Set text color on every other list item to grey
         // for(let i= 0; i <= listItems.length; i++ ){
@@ -55,27 +82,62 @@
         //     }
         // }
 
-        for(let i= 0; i <= listItems.length; i++ ) {
+        // for(let i= 0; i <= listItems.length; i++ ) {
+        //     if (i % 2 === 0) {
+        //         listItems[i].style.color = "red";
+        //     }
+        // }
+       for(let i= 0; i <= listItems.length; i++ ) {
             if (i % 2 === 0) {
                 listItems[i].style.color = "red";
             }
         }
 
+
+
         // TODO: Set text color of li with dbid = 1 to blue
         //  ⭐what if it is dbid = random name instead of number?
         //how can i point to exact one ?
-        listItems[0].style.color = "blue"
+
+        //listItems[0].style.color = "blue"
+        let dbid1 = document.querySelector('[data-dbid="1"]');
+
+       // dbid1.style.color = "blue" ;
+
+        let btn3 = document.getElementById("btn-three");
+        let handleClickBtn3 = function(){
+            dbid1.style.color = "blue"
+            //dbid1.setAttribute("style","color:blue")
+        }
+        btn3.addEventListener('click',handleClickBtn3)
+
 
         //
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
 
-        var subParagraphs = document.querySelector(".sub-paragraph");
+
+
+        let subParagraphs = document.getElementsByClassName("sub-paragraph");
+        let subpara =document.getElementById('sub-para')
+
         console.log(subParagraphs)
+        console.log(subpara);
+
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs.innerHTML = "Mission Accomplished !"
-    })();
+
+        // subpara.innerHTML = "Mission Accomplished !"
+
+        //
+        let btn4 = document.getElementById("btn-four")
+        let handleClickBtn4 = function(){
+            subpara.innerHTML = "Mission Accomplished😻"
+        };
+        btn4.addEventListener('click',handleClickBtn4);
+
+
+        })();
 </script>
 </body>
 </html>
