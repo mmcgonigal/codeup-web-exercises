@@ -168,7 +168,8 @@ function stringNumber(input){
     let arr=input.split("")
     return arr.length;
 };
-console.log(stringNumber('apple'))
+console.log(stringNumber('apple'));
+console.log(stringNumber('coconut'));
 
 function matchLength(input1,input2){
     if(input1 === stringNumber(input2)){
@@ -196,8 +197,8 @@ console.log(matchLength(10,'hello'))
 // Write a function that takes in a string input and logs each character of the string separately
 function logString(input){
     let arr= input.split('');
-    let i=0;
-    for(i = 0;  i<=arr.length; i++ ){
+
+    for(let i = 0;  i<=arr.length; i++ ){
         console.log (arr[i])
     }
 };
@@ -205,9 +206,8 @@ logString('apple');
 logString('banana');
 
 // Write a function that takes in a string and logs it 133 times
-function logOneThreeThreeTimes (input){
+//function logOneThreeThreeTimes (input)
 
-}
 
 // Write a function that takes in a string input and logs the first character, then the first two characts, etc., until the full string is logged.
 
@@ -295,6 +295,21 @@ function logOneThreeThreeTimes (input){
 
 // (CHALLENGE) Write a function that takes in an array of user objects, increases the value of averageAnnualPizzasOrdered by 5 for each user and returns the average annual pizzas ordered across all users, after this adjustment.
 
+
+//Make a program that filters through this array: ["Ryan", "Kieran", "Jason", "Mary", "Jo", "Jake"] and returns a new array that contains only those whose name have only 4 letters in them.
+//
+
+//
+//  let names = ["Ryan", "Kieran", "Jason", "Mary", "Jo", "Jake"]
+//
+// funtion (){
+//     let fourName= [];
+//     for(let i=0; i<names.length; i++){ //while for loop is going thru all the names ,
+//         if(names[i].length === 4){
+//         }
+//     }
+//
+// }
 
 
 
