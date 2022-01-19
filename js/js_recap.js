@@ -206,7 +206,17 @@ logString('apple');
 logString('banana');
 
 // Write a function that takes in a string and logs it 133 times
-//function logOneThreeThreeTimes (input)
+
+//takes string as input
+//logs133 times,
+
+
+function logOneThreeThreeTimes (input){
+    for(let i = 0; i <= 133; i ++){
+        console.log(input)
+    }
+}
+logOneThreeThreeTimes('banana')
 
 
 // Write a function that takes in a string input and logs the first character, then the first two characts, etc., until the full string is logged.
@@ -264,8 +274,24 @@ log_Str('codeup')
 // ========== + Arrays
 
 // Write a function that takes in two inputs and returns an array with those two inputs
+//1.takes two input to function.
+//2.change input to return arr
+function inputToArr (input1, input2){
+    let newArr =[];
+    newArr.push(input1,input2)
+    console.log(newArr)
+}
+inputToArr("apple","banana")
+
+// function printAll(...args){
+//     for(let i = 0; i < args.length; i++){
+//         console.log(args[i])
+//     }
+// }
+// printAll("banana","apple","watermelon");
 
 // Write a function that takes in and array and another input and returns true if the value of the second input is an element in the first input array
+
 
 // Write a function that takes in an array of numbers and returns the lowest number. Assume only number element values and an array of at least two numbers.
 
