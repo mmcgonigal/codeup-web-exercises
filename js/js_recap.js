@@ -221,8 +221,19 @@ logString('banana');
 // "Codeu"
 // "Codeup"
 
-//1function takes string as input
-//2 while loop.  , log.
+//1. takes string as input
+//2.create variable to put result.
+//3. everytime loops . add string to result.
+
+function log_Str(input){
+    let result = '';
+    for(let i= 0; i < input.length; i++){
+        result += input[i];
+        console.log(result);
+    }
+}
+log_Str('codeup')
+
 // function log_str(input){
 //     let arr = input.split("");
 //     console.log(arr)
@@ -234,6 +245,8 @@ logString('banana');
 //     }return addStr;
 // }
 // console.log(log_str("codeup"))
+
+
 // (CHALLENGE) Write a function that takes in two string inputs and for each letter in the first string, logs how many times that given letter appears in the second string. It should be case insensitive. If a letter appears more than once in the first string, the output should simply log the same message as many times as it appears in the first string.
 
 // Example Inputs: "Codeup", "Coding Challenges"
