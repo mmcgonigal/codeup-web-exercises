@@ -212,7 +212,6 @@ logString('banana');
 // Write a function that takes in a string input and logs the first character, then the first two characts, etc., until the full string is logged.
 
 // Example Input: 'Codeup'
-//
 // Example Output:
 //
 //     "C"
@@ -224,18 +223,17 @@ logString('banana');
 
 //1function takes string as input
 //2 while loop.  , log.
-
-function log_str(input){
-    let arr = input.split("");
-    console.log(arr)
-    for(let i = 0 ; i < arr.length; i++){
-       let addStr = arr[i];   // i= 0 ->[c]  /  i =1 ->[o]
-        for(let z = 0; z < i; z++){   //
-            addStr += addStr + arr[i+1] // [c] + arr[1]   arr[1]+
-        }
-    }return addStr;
-}
-console.log(log_str("codeup"))
+// function log_str(input){
+//     let arr = input.split("");
+//     console.log(arr)
+//     for(let i = 0 ; i < arr.length; i++){
+//        let addStr = arr[i];   // i= 0 ->[c]  /  i =1 ->[o]
+//         for(let z = 0; z < i; z++){   //
+//             addStr += addStr + arr[i] // [c] + arr[1]   arr[1]+
+//         }
+//     }return addStr;
+// }
+// console.log(log_str("codeup"))
 // (CHALLENGE) Write a function that takes in two string inputs and for each letter in the first string, logs how many times that given letter appears in the second string. It should be case insensitive. If a letter appears more than once in the first string, the output should simply log the same message as many times as it appears in the first string.
 
 // Example Inputs: "Codeup", "Coding Challenges"
@@ -316,19 +314,19 @@ console.log(log_str("codeup"))
 //3. put it in new array,
 
 
-// let names = ["Ryan", "Kieran", "Jason", "Mary", "Jo", "Jake"]
-//
-// function filterName() {
-//     let fourLetter = [];
-//     for (let i = 0; i < names.length; i++) { //while for loop is going thru all the names ,
-//         if (names[i].length === 4) {
-//             fourLetter.push(names[i]);
-//         }
-//         fourLetter += filterName(names[i]);
-//     }
-//     console.log(fourLetter);
-// }
+let names = ["Ryan", "Kieran", "Jason", "Mary", "Jo", "Jake"]
 
+function filterName() {
+    let fourLetter = [];
+    for (let i = 0; i < names.length; i++) { //while for loop is going thru all the names ,
+        if (names[i].length === 4) {
+            fourLetter.push(names[i]);
+        }
+        // fourLetter += filterName(names[i]);
+    }
+    console.log(fourLetter);
+}
+console.log(filterName(names));
 
 
 
