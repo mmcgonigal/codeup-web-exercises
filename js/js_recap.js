@@ -231,6 +231,19 @@ logOneThreeThreeTimes('banana')
 // "Codeu"
 // "Codeup"
 
+//1. take string as input
+//2.create variable to put result
+//3. everytime loops. add string to result.
+
+function takeString(input){
+    let result = '';
+    for(let i = 0; i <input.length; i++){
+        result+=input[i];
+        console.log(result);
+    }
+}
+takeString('사랑합니다.')
+
 //1. takes string as input
 //2.create variable to put result.
 //3. everytime loops . add string to result.
@@ -269,6 +282,7 @@ log_Str('codeup')
 // 'e' appears in 'Coding Challenges' 2 time(s)
 // 'u' appears in 'Coding Challenges' 0 time(s)
 // 'p' appears in 'Coding Challenges' 0 time(s)
+
 
 
 // ========== + Arrays
