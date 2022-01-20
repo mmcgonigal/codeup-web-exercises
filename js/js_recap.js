@@ -381,8 +381,36 @@ function filterName() {
 }
 console.log(filterName(names));
 
+// write a function that accepts a string and checks whether each character in the string is upperCase or lowerCase and returns "letter  [insert letter] is uppercase/lowercase", accordingly.  Bonus: return "is not a character" if it's not a letter
+//
+// input example: "bJI*ENsd4fRAIR5VIrsRFA-ijgRar"
+// output example:
+//     b is lowercase
+// J is uppercase
+// I is uppercase
+// * is not a letter
+// ...
 
 
+//1. take string as input
+//2. function each character
+//3. for looping ,  if upper case , else if lower case , else , not a letter.
+//charAt(), toUpperCase() ,toLowerCase(),
+// loop thru can help.
+
+
+function checkUpperLowerCase(input){
+   for( let i =0; i < input.length ; i++){
+       if(input.charAt(i) == input.toUpperCase()) {
+           console.log(`${charAt(i)} is uppercase`)
+       }else if(charAt(i) == input.toLowerCase()) {
+           console.log(`${charAt(i)} is lowercase`)
+       }else{
+           console.log('this is not a letter')
+       }
+       }
+   }
+checkUpperLowerCase('Banana');
 
 
 

@@ -90,6 +90,13 @@ sports.forEach(function(team){
 //charAt()
 //check if first letter of a team is "r"
 
+console.log(10%3)
 
+console.log(!!true)
 
+let band={
+    shred:function(){
+        console.log("RAAAAAH")
+    }
+}
 
