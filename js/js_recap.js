@@ -398,22 +398,24 @@ console.log(filterName(names));
 //charAt(), toUpperCase() ,toLowerCase(),
 // loop thru can help.
 
+let result = '';
+let stringToFilter = 'aslkfjsdifil12SDFE13'
 
-function checkUpperLowerCase(input){
-    let result = '';
-     result = charAt(i);
-   for( let i =0; i < input.length ; i++){
+function checkUpperLowerCase(){
 
-       if(result == result.toUpperCase()) {
-           console.log(`${charAt(i)} is uppercase`)
-       }else if(result == result.toLowerCase()) {
-           console.log(`${charAt(i)} is lowercase`)
+   for( let i =0; i < stringToFilter.length ; i++){
+        result = stringToFilter.charAt(i)
+
+       if(result.charAt(i) === result.toUpperCase()) {
+           console.log('letter ' + result + ' is uppercase');
+       }else if(result === result.toLowerCase()) {
+           console.log('letter ' + result + ' is lowercase');
        }else{
-           console.log('this is not a letter')
+           console.log(result + ' is not a letter.');
        }
        }
    }
-checkUpperLowerCase('Banana');
+checkUpperLowerCase(stringToFilter);
 
 
 
