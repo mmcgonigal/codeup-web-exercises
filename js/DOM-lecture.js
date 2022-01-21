@@ -47,7 +47,7 @@ let handleClick = function(){
 
 let button = document.querySelector('button')
 button.onclick = handleClick
-//even if calling function, make sure not add () .
+//even if calling function, make sure not add ().
 
 
 

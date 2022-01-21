@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+<h1 id="heading">Hello this is jquery exercise!</h1>
+<p id="codeup" class="heading-detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, molestiae!</p>
+<ul class="list">
+    <li class="list__items codeup">item1</li>
+    <a href="#" class="item__website">buy here</a>
+    <li class="list__items ">item2</li>
+    <a href="#" class="item__website">buy here</a>
+    <li class="list__items codeup">item3</li>
+    <a href="#" class="item__website">buy here</a>
+</ul>
+<p class="second__ptag">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, odit.</p>
+
+
+<script src="js/jquery-2.2.4.js"></script>
+
+<script>
+    // window.onload = function (){
+    //     alert('The page has finished loading')
+    // }
+    //
+    // $(document).ready(function(){
+    //     alert('The DOM has finished loading!⭐️')
+    // })  //this loads first
+    // let heading = $('#heading').html()
+    // console.log(heading);
+    //
+    // //remove element class
+    //
+    // $('p').last().removeClass('second__ptag');
+    //
+    // //give red solid border on class='codeup'
+    //
+    // let codeup = $('.codeup')
+    // console.log(codeup)
+    // codeup.css('border','1px solid red')
+    //
+    //
+    //
+    // //change li font size = 20px;
+    // codeup.css('font-size','20px');
+    //
+    //
+    // //h1, p, li background highlight
+    // let paragraph = $('.heading-detail').html()
+    // console.log(paragraph)
+    // $('h1').css('background-color','#fce4ec');
+    // $('p').css({'background-color':'#b3e5fc'});
+    // $('li').css('background-color','#c8e6c9');
+    //
+
+    //create jQuery statement to alert contents of h1 element
+    alert($('h1').text())
+
+
+   // $(".second__ptag").css('color','blue')
+
+    //combine your selectors h1, p, li
+    $('h1,p,li').css('background-color','#fff59d')
+
+
+
+
+
+
+</script>
+</body>
+</html>

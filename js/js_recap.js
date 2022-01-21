@@ -400,8 +400,10 @@ console.log(filterName(names));
 
 
 function checkUpperLowerCase(input){
+    let result = '';
    for( let i =0; i < input.length ; i++){
-       if(input.charAt(i) == input.toUpperCase()) {
+       let result = input[i]
+       if(result.charAt(i) == result.toUpperCase()) {
            console.log(`${charAt(i)} is uppercase`)
        }else if(charAt(i) == input.toLowerCase()) {
            console.log(`${charAt(i)} is lowercase`)
