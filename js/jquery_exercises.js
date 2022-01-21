@@ -34,14 +34,14 @@
 //use same id on 2 elements✅
 //$('#heading').css('color','red') // only worked on first element
 
-//update code so 3 different element has sam class name codeup.✅
+//update code so 3 different element has same class name codeup.✅
 
 //$('li').addClass('codeup')
 //$('.codeup').css('border','solid 1px red');
 
-//remove class from one of the element.
+//remove class from one of the element.✅
 
-//$('li:nth-child(2)').removeClass('codeup');
+//$('ul li:nth-child(2)').removeClass('codeup');
 //console.log ($('li:nth-child(2)'))
 
 //give another element an id of codeup✅
@@ -69,6 +69,7 @@
 
 
 
+
 ////////////////////////// jQuery Mouse Event exercise
 
 //add jQuery code that will change the background color of an h1 element when clicked.✅
@@ -90,7 +91,7 @@ heading.click(clickHandler)
 //3. put together --.dblclick()
 
 let heading__detail = $('#heading__detail')
-let dblclickHandler = () => {
+let dblclickHandler = function(){
     heading__detail.css('font-size','18px')
 };
 heading__detail.dblclick(dblclickHandler)

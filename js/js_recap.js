@@ -401,11 +401,12 @@ console.log(filterName(names));
 
 function checkUpperLowerCase(input){
     let result = '';
+     result = charAt(i);
    for( let i =0; i < input.length ; i++){
-       let result = input[i]
-       if(result.charAt(i) == result.toUpperCase()) {
+
+       if(result == result.toUpperCase()) {
            console.log(`${charAt(i)} is uppercase`)
-       }else if(charAt(i) == input.toLowerCase()) {
+       }else if(result == result.toLowerCase()) {
            console.log(`${charAt(i)} is lowercase`)
        }else{
            console.log('this is not a letter')

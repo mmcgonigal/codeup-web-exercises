@@ -5,6 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel=“preconnect” href=“https://fonts.googleapis.com”>
+    <link rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin>
+     <link href=“https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Questrial&display=swap” rel=“stylesheet”>
     <title>Document</title>
     <style>
         body{
@@ -112,21 +115,50 @@
 <script>
 // using jquery:
 // 1. give all table cells a black border ✅
+$('tr,td').css('border','1px solid black');
+$('th').css({'border':'1px solid black', 'background-color': '#f48fb1'});
+
 // 2. remove all bullet points from the unordered list items✅
+$('ul li').css('list-style','none');
+
 // 3. change the font family of the entire page to luxurious roman
+//$('*').css({'font-family', 'Abril Fatface', 'cursive';})
+//$('*').css({'font-family': 'Questrial', 'cursive'})
+//$('body').css('font-family
+
 //  ---> <link rel=“preconnect” href=“https://fonts.googleapis.com”>
 // <link rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin>
 // <link href=“https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Questrial&display=swap” rel=“stylesheet”>
 //  --->font-family: ‘Abril Fatface’, cursive;
 // font-family: ‘Questrial’, sans-serif;
-// 4. give each section a unique id
-// 5. using the unique id’s give each section a different background color
+
+// 4. give each section a unique id✅
+$('div section').attr('id','sub-para')
+$('.section-one').attr('id','section-one')
+
+// 5. using the unique id’s give each section a different background color✅
+$('#sub-para').css('background-color','#b2dfdb');
+$('#section-one').css('background-color','#ffab91');
+
 // 6. give 3 elements the same class name of “highlight”
+$('h1,h2,p a').addClass('highlight');
+
 // 7. give each of those 3 elements a bright yellow background
+$('.highlight').css('background','#fff59d')
 // 8. BONUS: when you click on the image, make the image larger than what it currently is
-$('tr,td').css('border','1px solid black');
-$('th').css({'border':'1px solid black', 'background-color': '#fff59d'});
-$('li').css('list-style','none');
+
+//1 .bring element
+//2 . eventhandler =click  --> image enlarge
+//3 . combine
+
+let img = $('#floofers');
+let clickHandler = function () {
+    $(this).css('transform','scale(1.5)')
+}
+img.click(clickHandler);
+
+
+
 
 
 </script>
