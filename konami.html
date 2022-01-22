@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+
+</head>
+<body>
+<h1>Konami Code</h1>
+<div>⬆︎</div>
+<div>⬆︎</div>
+<div>⬇︎</div>
+<div>⬇︎</div>
+<div>⬅︎</div>
+<div>➡︎</div>
+<div>⬅︎</div>
+<div>➡︎</div>
+<div>b</div>
+<div>a</div>
+<div>enter</div>
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+    //allow user to enter the Konami code
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+        let konami=[38,38,40,40,37,39,37,39,66,65,13]; // array of konami in keycode
+        let answerSheet =[];
+
+        function typeInput(codes) {
+            let userInput = []; //하나씩 타입할 인풋 엠티 어레이.
+            for (let i = 0; i <= konami.length; i++) {
+                userInput.keyCode += typeInput(codes[i]) //
+                //console.log(userInput.keyCode)
+                //console.log(typeInput(codes[i]))
+                if(userInput.keyCode[i] === konami[i]){
+                    answerSheet.push(userInput.keyCode[i]);
+                } // 같을때만, 인풋이 더해지므로, else 를 넣지 않음.
+            }return answerSheet;
+
+        }
+
+
+        // 만약에 인풋이 코나미랑 다르면, 앤솔쉿 자체에 올라가지 않음.
+
+
+
+
+
+
+    })
+
+
+
+</script>
+</body>
+</html>
