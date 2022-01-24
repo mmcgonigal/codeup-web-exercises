@@ -122,68 +122,69 @@
 //
     // ========== Conditional Logic and Functions
 
-// Write a function that takes in a number and returns triple the value of the passed number. Assume only number inputs.
-function tripleValue(input){
-    return input*3;
-}
-console.log(tripleValue(4));
+// Write a function that takes in a number and returns triple the value of the passed number. Assume only number inputs.✅
+// function tripleValue(input){
+//     return input*3;
+// }
+// console.log(tripleValue(4));
 
-// Modify the above function to work with numeric strings as well.
+// Modify the above function to work with numeric strings as well.✅
 
-function isNumber(input){
-    return Number(input)=== parseInt(input);
-}
-//Number converts the type whereas parseInt parses the value of input.
+// function isNumber(input){
+//     return Number(input)=== parseInt(input);
+// }
 
-
-console.log (isNumber('4'))
-
-function stillNumber(input){
-    if(isNumber(input)){
-        return parseInt(input)*3;
-    }
-};
-console.log(stillNumber('6'))
-console.log(stillNumber(5))
+//Number converts the type whereas parseInt parses the value of input.✅
 
 
-
-
-// Modify the above function to return a string output of 'not a number' if the input is not a number or numeric string.
-
-function notANumber(input){
-    if(!isNumber(input) || isNaN(input)){
-        return console.log (`${input} is not a number!`)
-    }
-}
-notANumber("apple");
-notANumber('4');
-notANumber(20);
-notANumber(true)
-notANumber(NaN);
-
-// Write a function that takes in a number and string and returns the string 'matches length' if the passed number is the length of the passed string and returns 'no length match' otherwise.
-
-function stringNumber(input){
-    let arr=input.split("")
-    return arr.length;
-};
-console.log(stringNumber('apple'));
-console.log(stringNumber('coconut'));
-
-function matchLength(input1,input2){
-    if(input1 === stringNumber(input2)){
-        return 'match length'
-    }else{
-          return 'no matching length'
-        }
-    };
-console.log(matchLength(5,'apple'))
-console.log(matchLength(10,'hello'))
+// console.log (isNumber('4'))
+//
+// function stillNumber(input){
+//     if(isNumber(input)){
+//         return parseInt(input)*3;
+//     }
+// };
+// console.log(stillNumber('6'))
+// console.log(stillNumber(5))
+//
 
 
 
-// (CHALLENGE) Write a function that takes in a day of the week as a string and returns the number that matches the day of the week. 'Sunday' should return 1 and 'Saturday' should return 7.
+// Modify the above function to return a string output of 'not a number' if the input is not a number or numeric string.✅
+
+// function notANumber(input){
+//     if(!isNumber(input) || isNaN(input)){
+//         return console.log (`${input} is not a number!`)
+//     }
+// }
+// notANumber("apple");
+// notANumber('4');
+// notANumber(20);
+// notANumber(true)
+// notANumber(NaN);
+
+// Write a function that takes in a number and string and returns the string 'matches length' if the passed number is the length of the passed string and returns 'no length match' otherwise.✅
+
+// function stringNumber(input){
+//     let arr=input.split("")
+//     return arr.length;
+// };
+// console.log(stringNumber('apple'));
+// console.log(stringNumber('coconut'));
+
+// function matchLength(input1,input2){
+//     if(input1 === stringNumber(input2)){
+//         return 'match length'
+//     }else{
+//           return 'no matching length'
+//         }
+//     };
+// console.log(matchLength(5,'apple'))
+// console.log(matchLength(10,'hello'))
+
+
+
+// (CHALLENGE) Write a function that takes in a day of the week as a string and returns the number that matches the day of the week. 'Sunday' should return 1 and 'Saturday' should return 7.✅
 //
 // function dayToNumber(days){
 //     let day = {Sunday:1, Monday:2, Tuesday:3, Wednesday:4, Thursday:5, Friday:6, Saturday:7 };
@@ -194,32 +195,32 @@ console.log(matchLength(10,'hello'))
 
 // ========== + Loops
 
-// Write a function that takes in a string input and logs each character of the string separately
-function logString(input){
-    let arr= input.split('');
+// Write a function that takes in a string input and logs each character of the string separately✅
+// function logString(input){
+//     let arr= input.split('');
+//
+//     for(let i = 0;  i<=arr.length; i++ ){
+//         console.log (arr[i])
+//     }
+// };
+// logString('apple');
+// logString('banana');
 
-    for(let i = 0;  i<=arr.length; i++ ){
-        console.log (arr[i])
-    }
-};
-logString('apple');
-logString('banana');
-
-// Write a function that takes in a string and logs it 133 times
+// Write a function that takes in a string and logs it 133 times✅
 
 //takes string as input
 //logs133 times,
 
+//
+// function logOneThreeThreeTimes (input){
+//     for(let i = 0; i <= 133; i ++){
+//         console.log(input)
+//     }
+// }
+// logOneThreeThreeTimes('banana')
 
-function logOneThreeThreeTimes (input){
-    for(let i = 0; i <= 133; i ++){
-        console.log(input)
-    }
-}
-logOneThreeThreeTimes('banana')
 
-
-// Write a function that takes in a string input and logs the first character, then the first two characts, etc., until the full string is logged.
+// Write a function that takes in a string input and logs the first character, then the first two characts, etc., until the full string is logged.✅
 
 // Example Input: 'Codeup'
 // Example Output:
@@ -235,27 +236,27 @@ logOneThreeThreeTimes('banana')
 //2.create variable to put result
 //3. everytime loops. add string to result.
 
-function takeString(input){
-    let result = '';
-    for(let i = 0; i <input.length; i++){
-        result+=input[i];
-        console.log(result);
-    }
-}
-takeString('사랑합니다.')
+// function takeString(input){
+//     let result = '';
+//     for(let i = 0; i <input.length; i++){
+//         result+=input[i];
+//         console.log(result);
+//     }
+// }
+// takeString('사랑합니다.')
 
 //1. takes string as input
 //2.create variable to put result.
 //3. everytime loops . add string to result.
 
-function log_Str(input){
-    let result = '';
-    for(let i= 0; i < input.length; i++){
-        result += input[i];
-        console.log(result);
-    }
-}
-log_Str('codeup')
+// function log_Str(input){
+//     let result = '';
+//     for(let i= 0; i < input.length; i++){
+//         result += input[i];
+//         console.log(result);
+//     }
+// }
+// log_Str('codeup')
 
 // function log_str(input){
 //     let arr = input.split("");
@@ -287,15 +288,15 @@ log_Str('codeup')
 
 // ========== + Arrays
 
-// Write a function that takes in two inputs and returns an array with those two inputs
-//1.takes two input to function.
-//2.change input to return arr
-function inputToArr (input1, input2){
-    let newArr =[];
-    newArr.push(input1,input2)
-    console.log(newArr)
-}
-inputToArr("apple","banana")
+// Write a function that takes in two inputs and returns an array with those two inputs✅
+// //1.takes two input to function.
+// //2.change input to return arr
+// function inputToArr (input1, input2){
+//     let newArr =[];
+//     newArr.push(input1,input2)
+//     console.log(newArr)
+// }
+// inputToArr("apple","banana")
 
 // function printAll(...args){
 //     for(let i = 0; i < args.length; i++){
@@ -361,27 +362,27 @@ inputToArr("apple","banana")
 // (CHALLENGE) Write a function that takes in an array of user objects, increases the value of averageAnnualPizzasOrdered by 5 for each user and returns the average annual pizzas ordered across all users, after this adjustment.
 
 
-//Make a program that filters through this array: ["Ryan", "Kieran", "Jason", "Mary", "Jo", "Jake"] and returns a new array that contains only those whose name have only 4 letters in them.
+//Make a program that filters through this array: ["Ryan", "Kieran", "Jason", "Mary", "Jo", "Jake"] and returns a new array that contains only those whose name have only 4 letters in them.✅
 //1.go thru array
 //2. find name with 4 letters
 //3. put it in new array,
 
+//
+// let names = ["Ryan", "Kieran", "Jason", "Mary", "Jo", "Jake"]
+//
+// function filterName() {
+//     let fourLetter = [];
+//     for (let i = 0; i < names.length; i++) { //while for loop is going thru all the names ,
+//         if (names[i].length === 4) {
+//             fourLetter.push(names[i]);
+//         }
+//         // fourLetter += filterName(names[i]);
+//     }
+//     console.log(fourLetter);
+// }
+// console.log(filterName(names));
 
-let names = ["Ryan", "Kieran", "Jason", "Mary", "Jo", "Jake"]
-
-function filterName() {
-    let fourLetter = [];
-    for (let i = 0; i < names.length; i++) { //while for loop is going thru all the names ,
-        if (names[i].length === 4) {
-            fourLetter.push(names[i]);
-        }
-        // fourLetter += filterName(names[i]);
-    }
-    console.log(fourLetter);
-}
-console.log(filterName(names));
-
-// write a function that accepts a string and checks whether each character in the string is upperCase or lowerCase and returns "letter  [insert letter] is uppercase/lowercase", accordingly.  Bonus: return "is not a character" if it's not a letter
+// write a function that accepts a string and checks whether each character in the string is upperCase or lowerCase and returns "letter  [insert letter] is uppercase/lowercase", accordingly.  Bonus: return "is not a character" if it's not a letter✅
 //
 // input example: "bJI*ENsd4fRAIR5VIrsRFA-ijgRar"
 // output example:
@@ -398,24 +399,36 @@ console.log(filterName(names));
 //charAt(), toUpperCase() ,toLowerCase(),
 // loop thru can help.
 
-let result = '';
-let stringToFilter = 'aslkfjsdifil12SDFE13'
+// let result = '';
+// let stringToFilter = 'aslkfjsdifil12SDFE13'
+//
+// function checkUpperLowerCase(){
+//
+//    for( let i =0; i < stringToFilter.length ; i++){
+//         result = stringToFilter.charAt(i)
+//
+//        if(result.charAt(i) === result.toUpperCase()) {
+//            console.log('letter ' + result + ' is uppercase');
+//        }else if(result === result.toLowerCase()) {
+//            console.log('letter ' + result + ' is lowercase');
+//        }else{
+//            console.log(result + ' is not a letter.');
+//        }
+//        }
+//    }
+// checkUpperLowerCase(stringToFilter);
 
-function checkUpperLowerCase(){
+//PROBLEM:  write a function that accepts a string of numbers and returns the sum of those numbers
+//INPUT 1: "42958372" --- EXPECTED OUTPUT 1: 40
+//INPUT 2: "917485"      --- EXPECTED OUTPUT 2: 34 (edited)
 
-   for( let i =0; i < stringToFilter.length ; i++){
-        result = stringToFilter.charAt(i)
+//1. function, accepts string of numbers,
+//2. break string in to numbers,split('')
+//3. put it in new array, parseInt() , , forEach add all index.
 
-       if(result.charAt(i) === result.toUpperCase()) {
-           console.log('letter ' + result + ' is uppercase');
-       }else if(result === result.toLowerCase()) {
-           console.log('letter ' + result + ' is lowercase');
-       }else{
-           console.log(result + ' is not a letter.');
-       }
-       }
-   }
-checkUpperLowerCase(stringToFilter);
+function addALL (input){
 
-
+    arrOfString = input.split()
+}
+addALL('123445');
 
