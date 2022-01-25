@@ -424,11 +424,29 @@
 
 //1. function, accepts string of numbers,
 //2. break string in to numbers,split('')
-//3. put it in new array, parseInt() , , forEach add all index.
+//3. put it in new array, Number() , , forEach add all index.
 
-function addALL (input){
+// function addAllInput(input){
+//     let arr = input.split('');
+//     let newArr = [];
+//     for(i = 0; i <= arr.length; i++){
+//         arr = Number(arr[i]);
+//         newArr.push(arr);
+//     }
+//     let sum = newArr.reduce(function(x,y){
+//     return x+y;
+//     },0);
+// }
 
-    arrOfString = input.split()
-}
-addALL('123445');
+
+
+
+
+// Write a function that returns an object displaying any number/letter that appears consecutively in a string of numbers. The object should display how many times that letter/number appears consecutively
+// INPUT: “42992338111134”
+// EXPECTED OUTPUT: {9: 2, 3: 2, 1: 4}
+// ---
+//     INPUT: “BQAAIPPPPFFA”
+// EXPECTED OUTPUT: {a: 2, p: 4, F: 2}
+
 
