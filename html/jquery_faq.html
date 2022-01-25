@@ -7,68 +7,93 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
   <style>
-      dt{
-          font-size: 36px;
-          color: #01579b
+      :root{
+          /*font size*/
+          --font-large: 36px;
+          --font-regular: 20px;
+      /*    color*/
+          --color-blue: #29b6f6;
+          --color-purple: #7585DE;
+          --color-brown: #733700;
+          --color-highlight: #fff59d;
+          --text-center: center;
+
+
+
+
       }
-      dd{
-          font-size: 24px;
-          color: #4f83cc;
+      dt,h3{
+          font-size:var(--font-large);
+          color: var(--color-blue)
+      }
+      dd,li{
+         font-size:var(--font-regular);
+          color: var(--color-brown);
       }
       .hidden__answer{
           visibility: hidden;
+      }
+      .highlight{
+          background-color: var(--color-highlight);
+      }
+      h1{
+          text-align: var(--text-center);
       }
 
   </style>
 </head>
 <body>
-<h1>National Park </h1>
+<h1>National Park Trivia </h1>
 <dl>
-    <dt class="question">National Park Fun Fact! </dt>
-    <dd class="answer">Fun Fact , wow ! wow ! wow ! </dd>
-    <dt class="question">National Park Fun Fact! </dt>
-    <dd class="answer">Fun Fact , wow ! wow ! wow ! </dd>
-    <dt class="question">National Park Fun Fact! </dt>
-    <dd class="answer">Fun Fact , wow ! wow ! wow ! </dd>
-    <dt class="question">National Park Fun Fact! </dt>
-    <dd class="answer">Fun Fact , wow ! wow ! wow ! </dd>
-    <dt class="question">National Park Fun Fact! </dt>
-    <dd class="answer">Fun Fact , wow ! wow ! wow ! </dd>
-    <dt class="question">National Park Fun Fact! </dt>
-    <dd class="answer">Fun Fact , wow ! wow ! wow ! </dd>
-    <dt class="question">National Park Fun Fact! </dt>
-    <dd class="answer">Fun Fact , wow ! wow ! wow ! </dd>
-    <dt class="question">National Park Fun Fact! </dt>
-    <dd class="answer">Fun Fact , wow ! wow ! wow ! </dd>
-    <dt class="question">National Park Fun Fact! </dt>
-    <dd class="answer">Fun Fact , wow ! wow ! wow ! </dd>
-    <dt class="question">National Park Fun Fact! </dt>
-    <dd class="answer">Fun Fact , wow ! wow ! wow ! </dd>
+    <dt class="question">What was the first national park? </dt>
+    <dd class="answer">Yellowstone(Wyoming, Montana, Idaho) </dd>
+    <dt class="question">Which national park has the deepest lake in the U.S.? </dt>
+    <dd class="answer">Cater Lake(oregon)-1,943 feet deep </dd>
+    <dt class="question">What causes the blue haze for which Great Smoky Mountains National park is named?</dt>
+    <dd class="answer">Plants - The haze is the result of transpiration : the evaporation of water from plants leaves. </dd>
+    <dt class="question">Which president signed the National Park Service into being in 1916? </dt>
+    <dd class="answer">Woodrow Wilson </dd>
+    <dt class="question">Butch Cassidy and his Wild Bunch hid out in the canyons of which national park? </dt>
+    <dd class="answer">Canyonlands(Utah)-After robbing trains at the turn of the 20th century, Cassidy and his gang hid in the confusing web of canyons in southwest Utah.</dd>
+    <dt class="question">An early 20th-century newspapers described which national park as offering 'all the adversity of hell without the inconveniences'</dt>
+    <dd class="answer">Death Valley(California and Nevada)-Death Valley is the driest and hottest place in North America, with less than two inches of rainfall each year and a record high temperature of 134f. </dd>
+    <dt class="question">Carbon Glacier in this national park has the greatest thickness and volume of any glacier in the continental U.S. </dt>
+    <dd class="answer">Mountain Rainier(Washington)</dd>
+    <dt class="question">Which national park includes the largest wilderness area east of the Mississippi River?</dt>
+    <dd class="answer">Everglades(florida)-The park is considered a swamp, but it was once a river 50miles wide and six inches deep. South Florida is the only place in the world where alligators and crocodiles live together.</dd>
+    <dt class="question">The most massive single mountain on Earth is located in which national park?</dt>
+    <dd class="answer">Hawaii Volcanoes-The volume of Mouna Loa, in Hawaii Volcanoes National Park, is some 20,000 cubic miles </dd>
+    <dt class="question">Which of the following national parks is the newest?</dt>
+    <dd class="answer">New River Gorge National park and Preserves, West Virginia</dd>
 </dl>
-<button id="reset">reset</button>
+<button id="reset__answer">reset</button>
+<h1>Fun Facts about National Parks</h1>
+
+<h3>Hawaii Volcanoes National Park</h3>
 <ul>
-    <h3>name of national park 1</h3>
-    <li>funfact Lorem ipsum dolor sit amet.</li>
-    <li>funfact Lorem ipsum dolor sit amet.</li>
-    <li>funfact Lorem ipsum dolor sit amet.</li>
-    <li>funfact Lorem ipsum dolor sit amet.</li>
-</ul>
-<ul>
-    <h3>name of national park2</h3>
-    <li>funfact Lorem ipsum dolor sit amet.</li>
-    <li>funfact Lorem ipsum dolor sit amet.</li>
-    <li>funfact Lorem ipsum dolor sit amet.</li>
-    <li>funfact Lorem ipsum dolor sit amet.</li>
-</ul>
-<ul>
-    <h3>name of national park</h3>
-    <li>funfact Lorem ipsum dolor sit amet.</li>
-    <li>funfact Lorem ipsum dolor sit amet.</li>
-    <li>funfact Lorem ipsum dolor sit amet.</li>
-    <li>funfact Lorem ipsum dolor sit amet.</li>
+    <li>The park is home to two active volcanoes</li>
+    <li>Mauna Loa is the Earth's largest volcano and exceeds Mountain Everest in height.</li>
+    <li>Kilauea stands east of Mauna Loa and is considered the world's most active volcano.</li>
+    <li>Mauna Loa covers half of the island in the south central area abd it has been active for nearly 700,000 years.</li>
 </ul>
 
-<button id="reset__list">this is button</button>
+<h3>Everglades</h3>
+<ul>
+    <li>It is one of the largest wetlands in the world </li>
+    <li>It is the only plance in the world where alligators and crocodiles coexist.</li>
+    <li>It provides drinking water for 7 million Floridians.</li>
+    <li>It is Home to unique, rare and endangered species inclding dozens of species of mosquitoes.</li>
+</ul>
+
+<h3>Death Valley</h3>
+<ul>
+    <li>It is drier than Sahara.</li>
+    <li>Some of the rocks move on their own at Death Valley.</li>
+    <li>If you listen carefully, the sands will sing to you.</li>
+    <li>Death Valley is the lowest point in North America.</li>
+</ul>
+
+<button id="yellow__background">this is the button </button>
 
 
 
