@@ -74,7 +74,7 @@ $('.question').click(function(){
     $(this).toggleClass('highlight')
 })
 
-///////////////////Traversing.
+/////////////////////Traversing.
 
 //creat a button when clicked,
 // makes the last li in each ul have yellow background.
@@ -86,6 +86,8 @@ $('#yellow__background').click(function(){
     $('li:last-child').css('background-color','var(--color-highlight');
 })
 
+
+
 //when any h3 is clicked, the lis underneath should be bolded.✅
 
 //1.h3, click,
@@ -94,6 +96,9 @@ console.log($('ul')) //children [h3,li,li,li,li]
 $('h3').click(function(){
    $(this).next().css('font-weight','bold')
 })
+// $('h3').click(function(){
+//     $(this).nextAll().css('font-weight','bold')
+// })
 
 //when any list item is clicked,
 // first li of the parent ul should have font color of blue.✅
@@ -106,6 +111,13 @@ $('li').click(function(){
 })
 
 /////////////bonus
+//create 3div , that looks like a picture frame  , have a uniq background, img,
+// button underneath ,swaps the image from the frame.
+//left frame swaps to right and take the image from left frame to center .
+//the center frame swaps frame randomly to either the left of right .
+//right frame swaps to the left and take s the image from the frame in the center.
+
+
 
 
 
