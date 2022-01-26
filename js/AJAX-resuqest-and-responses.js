@@ -116,5 +116,37 @@ $.ajax('https://dog.ceo/api/breeds/image/random',{
     console.log('always hello to you!')
 })
 
+//post https://jsonplaceholder.typicode.com/comment
+
+//Get the url  - using an AJAX request
+//loop through the array of data
+//jquery's .each()
+//while, do while, for loops, map.
+//get the actual names of the coments.
+//.done()method -- to capture the data when it is returned.
+//append to element
+//select/find the element that we want toa append to
+//create an element.
+
+//.ajex(url, options) //by defualt - GET
+
+$.get('https://jsonplaceholder.typicode.com/comment')
+    .done(function(data){
+        console.log(data);
+        //here we have access to the data returned,
 
 
+        //loops through data returned (which I know is an array from console.log)
+        $.each(data, function(i, comment){
+            console.log(comment.name)
+            let newEl = `<h1> S{comment.name} </h1>`
+
+            //slelect element we're appending to,
+            //append going to add whatever we pass in as child
+            //elemets to the element selected.
+            $('.container').append(newEl)
+        })
+    })
+
+
+//
