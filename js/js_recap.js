@@ -450,3 +450,7 @@
 // EXPECTED OUTPUT: {a: 2, p: 4, F: 2}
 
 
+let double = function (input){
+    return input*2
+}
+console.log(double)
