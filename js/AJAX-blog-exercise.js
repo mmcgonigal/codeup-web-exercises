@@ -34,3 +34,12 @@ $.get('https://jsonplaceholder.typicode.com/comments')//1
 
     })
 
+
+////////////////////////// This is Ajax Blog exercise/////////////////
+
+//1. At minimum, Ajax blog need empty div with id of posts.
+//2. add bootstrap theme to the file as well.
+//3. use Ajax to load the contents of blog.json and add the data from it to #posts div.
+//add additional entries to blog.json and make sure changes are reflected.
+
+
