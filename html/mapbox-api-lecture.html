@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Mapbox Map</title>
+    <!-- Mapbox CSS -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- Custom CSS -->
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>My First Mapbox Map!</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox JS -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+<!-- Custom JS -->
+<script>
+    mapboxgl.accessToken = '';
+    var map = new mapboxgl.Map({
+        container: 'map', // up in the div with id "map" , it wont work with class, but you can potentially change the id to something else than map, also if do that, need to change the  map related css as well.
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: [35.9078, 127.7669]
+    });
+
+    //create a new marker.
+
+    let marker = new mapboxgl.Marker().setLngLat([35.9078, 127.7669]).addTo(map)
+
+
+
+
+</script>
+</body>
+</html>
