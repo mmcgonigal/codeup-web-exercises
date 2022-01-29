@@ -21,21 +21,32 @@
 //loop through userInputs array and compare with corresponding value of answer array
 //if the value doesn't match, reset userInput array to empty
 //if the userInput array is the same length as the answer array and everything matches, pop up an alert
-
-
-
-        let keyStroke = event.keyCode
-            answerSheet.push(keyStroke)
+//
+//
+//
+//         let keyStroke = event.keyCode
+//         answerSheet.push(keyStroke)
+//
+//             if (answerSheet.stringify()===konami.stringify() && answerSheet.length === konami.length) {
+//                 alert('you gained 30 lives') // i was not sure whether i should use indexOF instead of [i]
+//             } else {
+//                 answerSheet.length = 0;
+//                 //this is where "fresh loop starts" if keyCode and konami doesn't match. ->restart event.
+//             }
+         let keyStroke = event.keyCode
+        answerSheet.push(keyStroke)
         for (let i = 0; i <= konami.length; i++) {
-            if (answerSheet[i] === konami[i] && answerSheet.length === konami.length) {
-               alert('you gained 30 lives') // i was not sure whether i should use indexOF instead of [i]
+            if (answerSheet.indexOf(i) === konami.indexOf(i) && answerSheet.length === konami.length) {
+                alert('you gained 30 lives') // i was not sure whether i should use indexOF instead of [i]
             } else {
-                answerSheet = [];
+                answerSheet.length = 0;
                 //this is where "fresh loop starts" if keyCode and konami doesn't match. ->restart event.
             }
         }
 
+
     })
+
 
 
 </script>
