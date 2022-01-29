@@ -9,38 +9,30 @@
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 <script>
     'use strict'
-
-    let answerSheet =[];
-    let konami=[38,38,40,40,37,39,37,39,66,65,13];
-
+    let konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+    let answerSheet = [];
     $(document).keyup(function(event){
         console.log(event.keyCode)
-         // console.log(event.keyCode); // any user input
-         // let keystroke = event.keyCode
-         //
-         // let userInput = []; //하나씩 타입할 인풋 엠티 어레이.
-         // for (let i = 0; i <= konami.length; i++) {
-         //     if (keystroke === konami[i]) {
-         //         answerSheet.push(keystroke);
-         //     }
-         // }console.log(answerSheet)
-        // if(answerSheet === konami ){
-        //     alert(`You have gained 30 lives`)
-        // }
-        let keyStroke = event.keyCode
-        let userInput = []; //하나씩 타입할 인풋 엠티 어레이.
+        //pseudo code:
+//make answer array
+//make empty userInputs array
+//detect keystroke
+//push that keystroke into userInputs array
+//loop through userInputs array and compare with corresponding value of answer array
+//if the value doesn't match, reset userInput array to empty
+//if the userInput array is the same length as the answer array and everything matches, pop up an alert
 
+
+
+        let keyStroke = event.keyCode
+            answerSheet.push(keyStroke)
         for (let i = 0; i <= konami.length; i++) {
-            if (keyStroke === konami[i]) {
-                userInput += keyStroke;
-                answerSheet.push(keyStroke);
-            }else{
-                location.reload()
-                 //this is where "fresh loop starts" if keyCode and konami doesn't match. ->restart event.
+            if (answerSheet[i] === konami[i] && answerSheet.length === konami.length) {
+               alert('you gained 30 lives') // i was not sure whether i should use indexOF instead of [i]
+            } else {
+                answerSheet = [];
+                //this is where "fresh loop starts" if keyCode and konami doesn't match. ->restart event.
             }
-        }
-        if(konami === answerSheet){
-            alert('you have added 30 lives!')
         }
 
     })
