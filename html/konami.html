@@ -11,8 +11,26 @@
     'use strict'
     let konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
     let answerSheet = [];
+   // let index = 0;
     $(document).keyup(function(event){
-        console.log(event.keyCode)
+        //console.log(event.keyCode)
+        //console.log(konami[counter]);//38
+        //if the keycode user push is same as konami index ,
+        //everytime user is pushing is going to be same as  counter ++
+
+        //konami[counter] = konami[0] / konami[counter+1] = konami[1]
+
+        // if(event.keyCode === konami[index]){
+        //     index+=1;
+        //     console.log(index)
+        // }else{
+        //     index = 0;
+        //     console.log(index)
+        // }
+        // if(index === 11){
+        //     alert('you got 30 life')
+        // }
+
         //pseudo code:
 //make answer array
 //make empty userInputs array
@@ -32,19 +50,21 @@
 //             } else {
 //                 answerSheet.length = 0;
 //                 //this is where "fresh loop starts" if keyCode and konami doesn't match. ->restart event.
-//             }
+// //             }
          let keyStroke = event.keyCode
+
         answerSheet.push(keyStroke)
-        for (let i = 0; i <= konami.length; i++) {
-            if (answerSheet.indexOf(i) === konami.indexOf(i) && answerSheet.length === konami.length) {
-                alert('you gained 30 lives') // i was not sure whether i should use indexOF instead of [i]
-            } else {
+        for (let i = 0; i < answerSheet.length; i++) {
+
+            if(answerSheet[i] !== konami[i]){
                 answerSheet.length = 0;
                 //this is where "fresh loop starts" if keyCode and konami doesn't match. ->restart event.
             }
         }
-
-
+        if(answerSheet.length === konami.length){
+            alert('you got 30 lives')
+        }
+        console.log(answerSheet)
     })
 
 
