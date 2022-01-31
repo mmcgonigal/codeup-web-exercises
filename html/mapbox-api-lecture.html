@@ -13,6 +13,7 @@
             height: 500px;
         }
     </style>
+    <script src="../js/key.js"></script>
 </head>
 <body>
 
@@ -26,17 +27,17 @@
 
 <!-- Custom JS -->
 <script>
-    mapboxgl.accessToken = '';
+    mapboxgl.accessToken = mapKey;
     var map = new mapboxgl.Map({
         container: 'map', // up in the div with id "map" , it wont work with class, but you can potentially change the id to something else than map, also if do that, need to change the  map related css as well.
         style: 'mapbox://styles/mapbox/streets-v9',
         zoom: 10,
-        center: [35.9078, 127.7669]
+        center: [-98.4916,29.4252]
     });
 
     //create a new marker.
 
-    let marker = new mapboxgl.Marker().setLngLat([35.9078, 127.7669]).addTo(map)
+   // let marker = new mapboxgl.Marker().setLngLat([35.9078, 127.7669]).addTo(map)
 
 
 
