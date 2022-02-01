@@ -4,6 +4,7 @@
 //     APPID: weatherKey,
 //     q:     "San Antonio, US",
 //     units: "imperial", //change to Fahrenheit.
+
 // }).done(function(data){
 //     console.log(data)
 //
@@ -23,24 +24,78 @@
 //     $('.weather__detail__pressure').html(data.main.pressure);
 // })
 
-$.get("http://api.openweathermap.org/data/2.5/forecast", {
-    APPID: weatherKey,
-    q:     "San Antonio, US",
-    units: "imperial",
-    cnt: 5, // how many timestamps
-}).done(function(data) {
-    console.log(data);
-    console.log(data.list[0].main.temp) // 1st day of temp.
 
-//
-//     let forecast5 = `<div class="container">
-//     <p class="cityName"><span class="city__name">${data.name}</span></p>
-//         <div class="weather__details">
-//             <p>Temperature :<span class="weather__detail__temp">${data.}</span></p>
-//             <p>Description : <span class="weather__detail__description"></span></p>
-//             <p>Humidity : <span class="weather__detail__humidity"></span></p>
-//             <p>Wind : <span class="weather__detail__wind"></span></p>
-//             <p>Pressure : <span class ="weather__detail__pressure"></span></p>
-//         </div>
-// </div>`
+
+    // console.log(data.list) //list of array
+    // console.log(data.list[0].main.temp) // 1st day of temp.
+    // console.log(data.list[0].dt_txt) //1st day date
+    // console.log(data.list[0].main.temp_max)
+    // console.log(data.list[0].main.temp_min)
+    // console.log(data.list[0].weather[0].description)
+    // console.log(data.list[0].main.humidity)
+    // console.log(data.list[0].wind.speed)
+    // console.log(data.list[0].main.pressure)
+
+
+
+// $.get("https://api.openweathermap.org/data/2.5/onecall", {
+//     APPID: weatherKey,
+//     units: "imperial", //change to Fahrenheit.
+//     lat: -98.4936,
+//     lon: 29.4241,
+// })
+
+
+$.get("http://api.openweathermap.org/data/2.5/onecall?", {
+    APPID: weatherKey,
+    lat:    29.423017,
+    lon:   -98.48527,
+    units: "imperial",
+    exclude: "current,hourly,hourly,alerts"
+}).done(function(data){
+   let sliceDays = data.daily.slice(0,5)
+    console.log(sliceDays)
+    let today = '';
+    let temp_min = '';
+    let temp_max = '';
+    let weather_description = '';
+    let humidity = '';
+    let wind_speed = '';
+    let weather_pressure = '';
+
+    sliceDays.forEach(function(day){
+
+       today =new Date(day.dt*1000).toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'})
+        console.log(date);
+
+            temp_min = day.temp.min;
+            temp_max = day.temp.max;
+            weather_description = day.weather[0].description;
+            humidity = day.humidity;
+            wind_speed = day.wind_speed;
+            weather_pressure = day.pressure;
+
+
+
+    })
 });
+
+
+
+
+    //     data.list.forEach(function (date) {
+    //
+    //     today = (date.dt * 1000).toLocaleDateString();
+
+    //     console.log(today)
+    //     console.log(temp_min)
+    //     console.log(temp_max)
+    //     console.log(weather_description)
+    //     console.log(humidity)
+    //     console.log(weather_pressure)
+    //     })
+    // })
+    // )
+    //
+    //
+    //

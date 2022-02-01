@@ -5,27 +5,67 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--    bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <title>Document</title>
     <style>
-        .container{
+        .container, .daily__weather{
             border: 1px solid black;
 
+        }
+        .daily__dates{
+            background-color: lightsteelblue;
         }
     </style>
 </head>
 <body>
 <h1>Weather</h1>
 
-<div class="container">
-    <p class="cityName"><span class="city__name"></span></p>
-        <div class="weather__details">
-            <p>Temperature : <span class="weather__detail__temp"></span></p>
-            <p>Description : <span class="weather__detail__description"></span></p>
-            <p>Humidity : <span class="weather__detail__humidity"></span></p>
-            <p>Wind : <span class="weather__detail__wind"></span></p>
-            <p>Pressure : <span class ="weather__detail__pressure"></span></p>
-        </div>
+<!--<div class="container">-->
+<!--    <p class="cityName"><span class="city__name"></span></p>-->
+<!--        <div class="weather__details">-->
+<!--            <p>Temperature : <span class="weather__detail__temp"></span></p>-->
+<!--            <p>Description : <span class="weather__detail__description"></span></p>-->
+<!--            <p>Humidity : <span class="weather__detail__humidity"></span></p>-->
+<!--            <p>Wind : <span class="weather__detail__wind"></span></p>-->
+<!--            <p>Pressure : <span class ="weather__detail__pressure"></span></p>-->
+<!--        </div>-->
+<!--</div>-->
+<div class="card">
+    <div class="card-header date">
+        date comes here
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">temp high / temp low comes here</li>
+        <li class="list-group-item">description comes here</li>
+        <li class="list-group-item">humidity comes here</li>
+        <li class="list-group-item">wind comes here</li>
+        <li class="list-group-item">Pressure comes here</li>
+    </ul>
 </div>
+
+
+<!--<section class="daily__weather">-->
+<!--    <div class="daily__dates"><span class="daily__date">date comes here</span></div>-->
+<!--    <div class="daily__details">-->
+<!--        <p class="daily__temperature"><span class="daily__temp__max">temp high</span><span class="daily__temp__min"> /temp low</span></p>-->
+<!--        <div class="bar" style="border:1px solid grey; width:80% "></div>-->
+<!--        <p class="daily__description">description comes here</p>-->
+<!--        <div class="bar" style="border:1px solid grey; width:80% "></div>-->
+<!--        <p class="daily__humidity">humidity comes here</p>-->
+<!--        <div class="bar" style="border:1px solid grey; width:80% "></div>-->
+<!--        <p class="daily__pressure">pressure comes here</p>-->
+<!--        <p></p>-->
+
+<!--    </div>-->
+<!--</section>-->
+
+
+<div id="look"> hello </div>
+
+
 
 <script src="../js/jquery-2.2.4.js"></script>
 <script src="../js/key.js"></script>
