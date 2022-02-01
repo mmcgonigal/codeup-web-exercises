@@ -62,21 +62,30 @@ $.get("http://api.openweathermap.org/data/2.5/onecall?", {
     let humidity = '';
     let wind_speed = '';
     let weather_pressure = '';
+    let weather_icon = '';
 
     sliceDays.forEach(function(day){
 
        today =new Date(day.dt*1000).toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'})
-        console.log(date);
-
             temp_min = day.temp.min;
             temp_max = day.temp.max;
             weather_description = day.weather[0].description;
             humidity = day.humidity;
             wind_speed = day.wind_speed;
             weather_pressure = day.pressure;
-
-
-
+            weather_icon = day.weather[0].icon
+           $('#card_table').append(`<div class="card col=2">
+        <div class="card-header date">
+            ${today}
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">min: ${temp_min} max: ${temp_max}<img style="display: inline-block" >http://openweathermap.org/img/w/${weather_icon}.png</img></li>
+            <li class="list-group-item">${weather_description}</li>
+            <li class="list-group-item">${humidity}</li>
+            <li class="list-group-item">${wind_speed}</li>
+            <li class="list-group-item">${weather_pressure}</li>
+        </ul>
+    </div>`)
     })
 });
 
