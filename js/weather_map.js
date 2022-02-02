@@ -53,7 +53,12 @@ $.get("http://api.openweathermap.org/data/2.5/onecall?", {
     units: "imperial",
     exclude: "current,hourly,hourly,alerts"
 }).done(function(data){
-   let sliceDays = data.daily.slice(0,5)
+    console.log(data.lat)
+    console.log(data.lon)
+    //new LngLat = (lng: data.lon, lat: data.lat)
+
+
+    let sliceDays = data.daily.slice(0,5)  // extract 5 days out of 7 days array.
     console.log(sliceDays)
     let today = '';
     let temp_min = '';
@@ -64,31 +69,73 @@ $.get("http://api.openweathermap.org/data/2.5/onecall?", {
     let weather_pressure = '';
     let weather_icon = '';
 
-    sliceDays.forEach(function(day){
 
-       today =new Date(day.dt*1000).toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'})
-            temp_min = day.temp.min;
-            temp_max = day.temp.max;
-            weather_description = day.weather[0].description;
-            humidity = day.humidity;
-            wind_speed = day.wind_speed;
-            weather_pressure = day.pressure;
-            weather_icon = day.weather[0].icon
-           $('#card_table').append(`<div class="card col=2">
-        <div class="card-header date">
-            ${today}
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">min: ${temp_min} max: ${temp_max}<img style="display: inline-block" >http://openweathermap.org/img/w/${weather_icon}.png</img></li>
-            <li class="list-group-item">${weather_description}</li>
-            <li class="list-group-item">${humidity}</li>
-            <li class="list-group-item">${wind_speed}</li>
-            <li class="list-group-item">${weather_pressure}</li>
-        </ul>
-    </div>`)
+    sliceDays.forEach(function (day) {
+
+        today = new Date(day.dt * 1000).toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric'}) // change the unix date unit into date
+        temp_min = day.temp.min;
+        temp_max = day.temp.max;
+        weather_description = day.weather[0].description;
+        humidity = day.humidity;
+        wind_speed = day.wind_speed;
+        weather_pressure = day.pressure;
+        weather_icon = day.weather[0].icon
+
+        $('#card_table').append(`
+            <div class="card col=2">
+                <div class="card-header date">
+                    ${today}
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">min: ${temp_min}℉
+                      max: ${temp_max}℉<br>
+                    <img src="http://openweathermap.org/img/w/${weather_icon}.png" style="display:inline-block"></li>
+                    <li class="list-group-item">Description : ${weather_description}</li>
+                    <li class="list-group-item">Humidity : ${humidity}</li>
+                    <li class="list-group-item">Wind : ${wind_speed}</li>
+                    <li class="list-group-item">Pressure : ${weather_pressure}</li>
+                </ul>
+            </div>
+        `)
     })
+
+    // mapboxgl.accessToken = mapKey;
+    // var map = new mapboxgl.Map({
+    //     container: 'map',
+    //     style: 'mapbox://styles/mapbox/streets-v9',
+    //     zoom: 10,
+    //     center: [data.lon, data.lat],
+    //
+    //     //need to add pin /marker with even of double click on map.
+    //     //when add pin, i need to retrieve data,
+    //
+    // });
+});
+mapboxgl.accessToken = mapKey;
+const coordinates = document.getElementById('coordinates');
+const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    center: [0, 0],
+    zoom: 2
 });
 
+const marker = new mapboxgl.Marker({
+    draggable: true
+})
+    .setLngLat([0, 0])
+    .addTo(map);
+
+function onDragEnd(e) {
+    const lngLat = marker.getLngLat();
+    //coordinates.style.display = 'block';
+    //coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
+    console.log(e.lngLat.lng);
+    console.log(e.lngLat.lat);
+}
+
+
+marker.on('dragend', onDragEnd);
 
 
 
