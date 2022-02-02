@@ -45,43 +45,74 @@
 //     lon: 29.4241,
 // })
 
+mapboxgl.accessToken = mapKey;
+let coordinates = document.getElementById('coordinates');
+let map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [0,0],
+    zoom: 2,
+});
 
-$.get("http://api.openweathermap.org/data/2.5/onecall?", {
-    APPID: weatherKey,
-    lat:    29.423017,
-    lon:   -98.48527,
-    units: "imperial",
-    exclude: "current,hourly,hourly,alerts"
-}).done(function(data){
-    console.log(data.lat)
-    console.log(data.lon)
-    //new LngLat = (lng: data.lon, lat: data.lat)
-
-
-    let sliceDays = data.daily.slice(0,5)  // extract 5 days out of 7 days array.
-    console.log(sliceDays)
-    let today = '';
-    let temp_min = '';
-    let temp_max = '';
-    let weather_description = '';
-    let humidity = '';
-    let wind_speed = '';
-    let weather_pressure = '';
-    let weather_icon = '';
+let marker = new mapboxgl.Marker({
+    draggable: true
+})
+    .setLngLat([0,0])
+    .addTo(map);
 
 
-    sliceDays.forEach(function (day) {
+let geo_lon = '';
+let geo_lat = '';
 
-        today = new Date(day.dt * 1000).toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric'}) // change the unix date unit into date
-        temp_min = day.temp.min;
-        temp_max = day.temp.max;
-        weather_description = day.weather[0].description;
-        humidity = day.humidity;
-        wind_speed = day.wind_speed;
-        weather_pressure = day.pressure;
-        weather_icon = day.weather[0].icon
+function onDragEnd() {
+    console.log(marker)
+    let lngLat = marker.getLngLat();
+    console.log(lngLat)
+    coordinates.style.display = 'block';
+    coordinates.innerText = `Longitude: ${lngLat.lng} Latitude: ${lngLat.lat}`;
+    geo_lon =lngLat.lng;
+    geo_lat = lngLat.lat;
 
-        $('#card_table').append(`
+    console.log(geo_lon)
+    console.log(geo_lat)
+
+
+    $.get("http://api.openweathermap.org/data/2.5/onecall?", {
+        APPID: weatherKey,
+        lat:    geo_lat,
+        lon:   geo_lon,
+        units: "imperial",
+        exclude: "current,hourly,hourly,alerts"
+    }).done(function(data){
+        // console.log(data.lat)
+        // console.log(data.lon)
+        //new LngLat = (lng: data.lon, lat: data.lat)
+
+
+        let sliceDays = data.daily.slice(0,5)  // extract 5 days out of 7 days array.
+        console.log(sliceDays)
+        let today = '';
+        let temp_min = '';
+        let temp_max = '';
+        let weather_description = '';
+        let humidity = '';
+        let wind_speed = '';
+        let weather_pressure = '';
+        let weather_icon = '';
+
+
+        sliceDays.forEach(function (day) {
+
+            today = new Date(day.dt * 1000).toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric'}) // change the unix date unit into date
+            temp_min = day.temp.min;
+            temp_max = day.temp.max;
+            weather_description = day.weather[0].description;
+            humidity = day.humidity;
+            wind_speed = day.wind_speed;
+            weather_pressure = day.pressure;
+            weather_icon = day.weather[0].icon
+
+            $('#card_table').append(`
             <div class="card col=2">
                 <div class="card-header date">
                     ${today}
@@ -97,65 +128,74 @@ $.get("http://api.openweathermap.org/data/2.5/onecall?", {
                 </ul>
             </div>
         `)
-    })
+        })
 
-    // mapboxgl.accessToken = mapKey;
-    // var map = new mapboxgl.Map({
-    //     container: 'map',
-    //     style: 'mapbox://styles/mapbox/streets-v9',
-    //     zoom: 10,
-    //     center: [data.lon, data.lat],
-    //
-    //     //need to add pin /marker with even of double click on map.
-    //     //when add pin, i need to retrieve data,
-    //
-    // });
-});
-mapboxgl.accessToken = mapKey;
-let coordinates = document.getElementById('coordinates');
-let map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
-    center: [0, 0],
-    zoom: 2
-});
 
-let marker = new mapboxgl.Marker({
-    draggable: true
-})
-    .setLngLat([0, 0])
-    .addTo(map);
+    });
 
-function onDragEnd(e) {
-    console.log(marker)
-    let lngLat = marker.getLngLat();
-    console.log(lngLat.lng)
-    coordinates.style.display = 'block';
-    coordinates.innerText = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
 
 }
-
-
-
-
 
 marker.on('dragend', onDragEnd);
 
 
 
-    //     data.list.forEach(function (date) {
-    //
-    //     today = (date.dt * 1000).toLocaleDateString();
 
-    //     console.log(today)
-    //     console.log(temp_min)
-    //     console.log(temp_max)
-    //     console.log(weather_description)
-    //     console.log(humidity)
-    //     console.log(weather_pressure)
-    //     })
-    // })
-    // )
-    //
-    //
-    //
+
+
+
+// $.get("http://api.openweathermap.org/data/2.5/onecall?", {
+//     APPID: weatherKey,
+//     lat:    29.423017,
+//     lon:   -98.48527,
+//     units: "imperial",
+//     exclude: "current,hourly,hourly,alerts"
+// }).done(function(data){
+//     // console.log(data.lat)
+//     // console.log(data.lon)
+//     //new LngLat = (lng: data.lon, lat: data.lat)
+//
+//
+//     let sliceDays = data.daily.slice(0,5)  // extract 5 days out of 7 days array.
+//     console.log(sliceDays)
+//     let today = '';
+//     let temp_min = '';
+//     let temp_max = '';
+//     let weather_description = '';
+//     let humidity = '';
+//     let wind_speed = '';
+//     let weather_pressure = '';
+//     let weather_icon = '';
+//
+//
+//     sliceDays.forEach(function (day) {
+//
+//         today = new Date(day.dt * 1000).toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric'}) // change the unix date unit into date
+//         temp_min = day.temp.min;
+//         temp_max = day.temp.max;
+//         weather_description = day.weather[0].description;
+//         humidity = day.humidity;
+//         wind_speed = day.wind_speed;
+//         weather_pressure = day.pressure;
+//         weather_icon = day.weather[0].icon
+//
+//         $('#card_table').append(`
+//             <div class="card col=2">
+//                 <div class="card-header date">
+//                     ${today}
+//                 </div>
+//                 <ul class="list-group list-group-flush">
+//                     <li class="list-group-item">min: ${temp_min}℉
+//                       max: ${temp_max}℉<br>
+//                     <img src="http://openweathermap.org/img/w/${weather_icon}.png" style="display:inline-block"></li>
+//                     <li class="list-group-item">Description : ${weather_description}</li>
+//                     <li class="list-group-item">Humidity : ${humidity}</li>
+//                     <li class="list-group-item">Wind : ${wind_speed}</li>
+//                     <li class="list-group-item">Pressure : ${weather_pressure}</li>
+//                 </ul>
+//             </div>
+//         `)
+//     })
+//
+//
+// });
