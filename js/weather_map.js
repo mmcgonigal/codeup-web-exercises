@@ -112,27 +112,31 @@ $.get("http://api.openweathermap.org/data/2.5/onecall?", {
     // });
 });
 mapboxgl.accessToken = mapKey;
-const coordinates = document.getElementById('coordinates');
-const map = new mapboxgl.Map({
+let coordinates = document.getElementById('coordinates');
+let map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v9',
     center: [0, 0],
     zoom: 2
 });
 
-const marker = new mapboxgl.Marker({
+let marker = new mapboxgl.Marker({
     draggable: true
 })
     .setLngLat([0, 0])
     .addTo(map);
 
 function onDragEnd(e) {
-    const lngLat = marker.getLngLat();
-    //coordinates.style.display = 'block';
-    //coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
-    console.log(e.lngLat.lng);
-    console.log(e.lngLat.lat);
+    console.log(marker)
+    let lngLat = marker.getLngLat();
+    console.log(lngLat.lng)
+    coordinates.style.display = 'block';
+    coordinates.innerText = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
+
 }
+
+
+
 
 
 marker.on('dragend', onDragEnd);

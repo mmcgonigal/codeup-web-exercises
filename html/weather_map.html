@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -32,6 +32,19 @@
             border: solid 2px black;
             margin-top: 40px;
         }
+        .coordinates {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            position: absolute;
+            bottom: 40px;
+            left: 10px;
+            padding: 5px 10px;
+            margin: 0;
+            font-size: 11px;
+            line-height: 18px;
+            border-radius: 3px;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -54,6 +67,8 @@
 <!--    </div>-->
 </div>
 <div id="map"></div>
+<div id="coordinates" class="coordinates"></div>
+
 
 
 
