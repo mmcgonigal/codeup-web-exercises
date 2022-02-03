@@ -11,26 +11,32 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 <!--    mapbox-->
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
 <!-- Mapbox CSS -->
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
-    <title>Document</title>
+    <title>Weather the Sunny or not</title>
+    <link rel="icon" type='image-x-icon' href="../assets/sun-solid%20(1).png">
 
     <style>
         body{
-            background-image: url(../assets/aura.jpg);
+            background-image: url(../assets/beach.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+            display:flex;
+            flex-direction: column;
         }
         .head{
             color: whitesmoke;
         }
         #map{
             width: 100%;
-            height: 700px;
+            height: 500px;
             border-radius: 8px;
             border: solid 2px black;
             margin-top: 40px;
+            position: relative
+
         }
         .coordinates {
             background: rgba(0, 0, 0, 0.5);
@@ -45,14 +51,44 @@
             border-radius: 3px;
             display: none;
         }
+
+        .forecast__body{
+            flex-basis: 20%;
+            justify-content: space-around;
+            margin:auto;
+        }
+        .city__placeholder {
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+
+
+
+
+
+
     </style>
 </head>
 <body>
-<div class="head">
-    Weather App
+<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="../assets/sun-solid%20(1).png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Weather the Sunny or Not!
+    </a>
+    <form class="form-inline">
+        <input class="form-control mr-sm-2 geocoder" type="search" placeholder="Name of City" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0 search__button" type="button">Search weather here <img src="../assets/sun-solid%20(1).png" width="30" height="30" class="d-inline-block align-top" alt=""> </button>
+    </form>
+</nav>
+<div class="city__placeholder">
+    <P>Current City : <span class="nameOfcity"></span></P>
 </div>
 
-<div id="card_table" class="row d-flex justify-content-around">
+
+
+<div id="card_table" class="row justify-content-around">
 <!--    <div class="card col=2">-->
 <!--        <div class="card-header date">-->
 <!--            date comes here-->
@@ -66,7 +102,12 @@
 <!--        </ul>-->
 <!--    </div>-->
 </div>
-<div id="map"></div>
+<hr>
+<div id="map_container" class="container">
+    <div id="map"></div>
+</div>
+
+
 <div id="coordinates" class="coordinates"></div>
 
 
