@@ -180,11 +180,12 @@ users.forEach(function(user) {
 // TODO: rewrite the following loop to use a for..of loop
 
     developers.forEach(function (developer) {
-        for(const developer of developers){
+        for (const developer of developers) {
 
 
-    // TODO: rewrite the assignment below to use template strings
-    list += '<li>' + developer + '</li>';
-}
-list += '</ul>';
+            // TODO: rewrite the assignment below to use template strings
+            list += '<li>' + developer + '</li>';
+        }
+        list += '</ul>';
         console.log(list);
+    })
