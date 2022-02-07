@@ -83,8 +83,175 @@ let foodOptions = [
 // Create a new array populated with the results of calling a provided function in every element in the array.
 
 //OLD WAY
+//
+// foodOptions.forEach(function(restaurant){
+//     restaurant.specialty = restaurant.specialty + 'y'  //just to show restaurant.specialty has 'y' at the end,
+//     console.log(foodOptions);
+// })
 
+// NEW WAY W / MAP
+//
+// let newArray = foodOption.map(restaurant=> restaurant.specialty= restaurant.specialty + "Y" ) // arrow function function(restaurant){}
+//
+// console.log(newArray);
+// console.log(foodOptions);
+//
+//                                                                                              //
+// let names = foodOptions.map(restaurant=> "<li>" + restaurant.name + "</li>");
+// console.log(names);
+//
+// names.forEach(name => document.querySelector("#restaurants").innerHTML += name);
+
+
+//FILTER
+
+//creates a new array with all elements that pass the test implemented by the provided function
+
+let mexicanFood = foodOptions.filter(restaurant => restaurant.specialty === 'mexican-food' );
+
+console.log(mexicanFood);
+
+let mexFood = [];
 foodOptions.forEach(function(restaurant){
-    restaurant.specialty = restaurant.specialty + 'y'
-    console.log(foodOptions);
+    if(restaurant.specialty === 'mexican-food'){
+        mexFood.push(restaurant)
+    }
 })
+console.log(mexFood);
+
+//REDUCE
+// Executes a callback function that takes two parameters (previousValue, CurrentValue) on each element in the array .
+// the final result of running the reducer across all elements of the array as a single value.
+
+let grades = [91,88,76,88,68,95]
+let gradeTotal = grades.reduce(function(pre,current){
+   return pre + current
+},0) // starting valu is 0
+// so , it becomes, 0 (pre) + 91(current : index 0 ) = 91
+// 91(pre) + 88 (current: index 1) = 179
+//179 (pre) + 76(current : index 2) ..go on .. ;
+
+let sports = ['baseball','football','hockey','curling','basketball'];
+
+let sportsString = sports.reduce((previousValue,currentValue)=>{
+    return previousValue + '' + currentValue + '';
+},'')
+console.log(sportsString)
+
+
+const users = [
+    {
+        id: 1,
+        name: 'ryan',
+        email: 'ryan@codeup.com',
+        languages: ['clojure', 'javascript'],
+        yearsOfExperience: 5
+    },
+    {
+        id: 2,
+        name: 'luis',
+        email: 'luis@codeup.com',
+        languages: ['java', 'scala', 'php'],
+        yearsOfExperience: 6
+    },
+    {
+        id: 3,
+        name: 'zach',
+        email: 'zach@codeup.com',
+        languages: ['javascript', 'bash'],
+        yearsOfExperience: 7
+    },
+    {
+        id: 4,
+        name: 'fernando',
+        email: 'fernando@codeup.com',
+        languages: ['java', 'php', 'sql'],
+        yearsOfExperience: 8
+    },
+    {
+        id: 5,
+        name: 'justin',
+        email: 'justin@codeup.com',
+        languages: ['html', 'css', 'javascript', 'php'],
+        yearsOfExperience: 9
+    }
+];
+
+// 2 . use *filter* to creat an array of user objects where each user object has at least 3 languages in languages array.
+
+let threeOrMore = users.filter(function(user){
+    if(user.languages.length>=3){
+        return user;
+    }
+});
+console.log(threeOrMore)
+
+// 3. use .map to creat an array of strings where each element is a user's email address.
+
+let address = users.map(user=>{
+    return user.email ;
+})
+console.log(address);
+
+// 4. use .reduce to get the total years of experience from the list of users.
+// once you get the total of years of experience from user group,  calculate the result
+// to average.
+
+// get array of only user.yearsOfExperience.
+//use reduce method.
+
+let totalYear = users.map(user=>{
+    return user.yearsOfExperience
+})
+let sumYears = totalYear.reduce((previousValue,currentValue)=>{
+    return previousValue + currentValue;
+},0)
+
+let avgYr = sumYears / users.length
+
+console.log (avgYr) //7
+
+//5 . use .reduce to get the longest email from the list of users.
+
+let longestEmailAddress = address.reduce((pre,current)=>{
+    if(pre.length > current.length){
+        return pre ;
+    }else{
+        return current;
+    }
+})
+console.log(longestEmailAddress)
+
+
+
+//6. use .reduce to get the list of user's name in a single string.
+
+
+// let namesOfInstructors = users.map(user=>{
+//     return user.name;
+// })
+// console.log(namesOfInstructors)
+// let instructors = `Your instructors names are ${namesOfInstructors.join(',')}`
+//
+// console.log(instructors)
+
+let namesOfInstructors = users.map(user=>{
+    return user.name;
+})
+let instructors = namesOfInstructors.reduce((previousValue,currentValue)=>{
+    return   previousValue + currentValue + "  ,"
+},`Instructores' names are : `)
+console.log(instructors )
+
+
+
+
+
+
+
+
+
+
+
+
+
