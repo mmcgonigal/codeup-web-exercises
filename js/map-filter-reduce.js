@@ -188,9 +188,9 @@ console.log(threeOrMore)
 
 // 3. use .map to creat an array of strings where each element is a user's email address.
 
-let address = users.map(user=>{
-    return user.email ;
-})
+let address = users.map(user=>
+     user.email
+)
 console.log(address);
 
 // 4. use .reduce to get the total years of experience from the list of users.
@@ -200,12 +200,12 @@ console.log(address);
 // get array of only user.yearsOfExperience.
 //use reduce method.
 
-let totalYear = users.map(user=>{
-    return user.yearsOfExperience
-})
-let sumYears = totalYear.reduce((previousValue,currentValue)=>{
-    return previousValue + currentValue;
-},0)
+let totalYear = users.map(user=>
+     user.yearsOfExperience
+)
+let sumYears = totalYear.reduce((previousValue,currentValue)=>
+     previousValue + currentValue
+,0)
 
 let avgYr = sumYears / users.length
 
@@ -213,12 +213,13 @@ console.log (avgYr) //7
 
 //5 . use .reduce to get the longest email from the list of users.
 
-let longestEmailAddress = address.reduce((pre,current)=>{
-    if(pre.length > current.length){
-        return pre ;
-    }else{
+let longestEmailAddress = address.reduce((pre,current)=> {
+    if (pre.length > current.length) {
+        return pre;
+    } else {
         return current;
     }
+
 })
 console.log(longestEmailAddress)
 
@@ -226,7 +227,7 @@ console.log(longestEmailAddress)
 
 //6. use .reduce to get the list of user's name in a single string.
 
-
+//
 // let namesOfInstructors = users.map(user=>{
 //     return user.name;
 // })
@@ -243,6 +244,15 @@ let instructors = namesOfInstructors.reduce((previousValue,currentValue)=>{
 },`Instructores' names are : `)
 console.log(instructors )
 
+
+//BONUS . use .reduce to get the unique list of language  from the list of users.
+
+let listOfLanguage = users.map(user=>user.languages)
+console.log(listOfLanguage)
+//
+// let languages = listOfLanguage.reduce((pre_lang,next_lang)=>{
+//     if (pre_lang.includes
+// },[])
 
 
 
