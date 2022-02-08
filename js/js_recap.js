@@ -450,7 +450,12 @@
 // EXPECTED OUTPUT: {a: 2, p: 4, F: 2}
 
 
-let double = function (input){
-    return input*2
-}
-console.log(double)
+//Write a function that removes any duplicates from an array.
+input = [2,3,5,8,3,1,2,6,3,2,7,8,2,4,7]
+// expected output: [2,3,5,8,1,6,7,4]
+//
+// let pickOutDuplicates = input.reduce((previousValue,currentValue)=>{
+//     let newArry=[]
+//     previousValue !== currentValue ? newArry.push() : false;
+// })
+// console.log(pickOutDuplicates)

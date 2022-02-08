@@ -247,9 +247,9 @@ console.log(instructors )
 
 //BONUS . use .reduce to get the unique list of language  from the list of users.
 
-let listOfLanguage = users.map(user=>user.languages)
-console.log(listOfLanguage)
-//
+// let listOfLanguage = users.map(user=>user.languages)
+// console.log(listOfLanguage)
+// //
 // let languages = listOfLanguage.reduce((pre_lang,next_lang)=>{
 //     if (pre_lang.includes
 // },[])
