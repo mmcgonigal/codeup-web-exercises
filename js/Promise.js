@@ -74,19 +74,6 @@
 //
 //
 //
-// let deduct = ()=>{
-//     new Promise((resolve,rejected)=>{
-//         return resolve -2
-//     })
-// }
-// let multiple = ()=>{
-//     new Promise((resolve,rejected)=>{
-//         return resolve *2
-//     })
-// }
-//
-// // add(10).then(deduct).then(multiple)
-// add.then().then().catch()
 
 //CUSTOM PROMISES
 
@@ -111,6 +98,10 @@
 //     console.log("rejected!")
 // })
 //
+//promise
+
+
+
 // const customPromise =
 //     new Promise(
 //         function (successParam, failedParam)
@@ -134,4 +125,52 @@
 //
 // console.log(customPromise);
 //
-fetch(url, {headers: {'Authorization':githubKey}})
+
+//
+// let myCustomPromise = new Promise((resolve,reject)=>{
+//    let randomNum = Math.random();
+//    if(randomNum > 0.5){
+//       console.log(randomNum)
+//       resolve(randomNum + 10)
+//    }else{
+//       reject('math.random gave a number smaller than 0.5')
+//    }
+// })
+// myCustomPromise.then((val)=>{console.log(val)})
+// .catch((err)=>{console.log(err)})
+
+
+
+// let myCalculate = new Promise((resolve,reject)=>{
+//    let input = prompt('let me get a number')
+//    if(typeof input ==='number') {
+//       resolve('this is number--- we will process to then()')
+//    }else{
+//       reject("Not a number --- we will process to catch()")
+//    }
+// })
+// myCalculate
+//     .then((input)=>{
+//        return input +5;
+//     })
+//     .then((num)=>{
+//        return num*10;
+//     })
+//     .catch(()=>{
+//        prompt("thats not a number, try again")
+//     })
+
+
+fetch('https://api.github.com/users/mmcgonigal'
+, {headers: {'Authorization':'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'}})
+
+    .then(response => response.json())
+    .then(data =>{
+       console.log(data);
+       console.log(data.updated_at)
+    })
+    .catch(error => console.log(error))
+
+let userInfo = new Promise((resolve,reject)=>{
+
+})
