@@ -451,7 +451,7 @@
 
 
 //Write a function that removes any duplicates from an array.
-input = [2,3,5,8,3,1,2,6,3,2,7,8,2,4,7]
+//input = [2,3,5,8,3,1,2,6,3,2,7,8,2,4,7]
 // expected output: [2,3,5,8,1,6,7,4]
 //
 // let pickOutDuplicates = input.reduce((previousValue,currentValue)=>{
@@ -459,3 +459,18 @@ input = [2,3,5,8,3,1,2,6,3,2,7,8,2,4,7]
 //     previousValue !== currentValue ? newArry.push() : false;
 // })
 // console.log(pickOutDuplicates)
+
+
+
+// write a function that collects vowel from input and count it .
+ function count_vowel(input){
+    let count=[];
+    let word =  input.split(',')
+     for( i = 0; i <= word.length ; i++){
+         if(word[i]==='a' || word[i]==='e' ||word[i]==='i' ||word[i]==='o' ||word[i]==='u' ){
+             count.push[i]
+         }
+     }
+    console.log(count.length)
+ }
+count_vowel('banana');

@@ -160,17 +160,38 @@
 //        prompt("thats not a number, try again")
 //     })
 
+/////////////////////////////////////////////////////////exercise
 
 fetch('https://api.github.com/users/mmcgonigal'
-, {headers: {'Authorization':'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'}})
+, {headers: {'Authorization':githubKey}})
 
     .then(response => response.json())
     .then(data =>{
        console.log(data);
        console.log(data.updated_at)
+
     })
     .catch(error => console.log(error))
 
-let userInfo = new Promise((resolve,reject)=>{
+
+let userInfo =(username)=>{
+    fetch(`https://api.github.com/users/${username}`
+        , {headers: {'Authorization':githubKey}})
+
+        .then(response => response.json())
+        .then(data=>{
+            console.log(data);
+            console.log(data.updated_at)
+        })
+}
+userInfo('mmcgonigal');
+
+///Create your own Promise named wait
+
+let wait = new Promise((resolve,reject)=>{
+
 
 })
+
+
+
