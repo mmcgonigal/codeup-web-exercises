@@ -81,12 +81,4 @@
 
 
 
-const url = 'https://codeup-restful-example.glitch.me/reviews'
-const reqBody= {
-    'id' : 123,
-    'restaurant-id' : 1,
-    'name' : 'mina'
-    'createdAt : '
-}
-
 

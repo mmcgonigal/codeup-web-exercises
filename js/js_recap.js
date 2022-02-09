@@ -462,15 +462,36 @@
 
 
 
-// write a function that collects vowel from input and count it .
+// write a function that collects vowel from input and count it . ✅
+//take input as argument,
+//split the input into array, .split()
+//go thru for loop.
+// if the [i] is vowel, push it to new array ,
+//count array length
+
  function count_vowel(input){
-    let count=[];
-    let word =  input.split(',')
-     for( i = 0; i <= word.length ; i++){
-         if(word[i]==='a' || word[i]==='e' ||word[i]==='i' ||word[i]==='o' ||word[i]==='u' ){
-             count.push[i]
-         }
+     let collectLetter = [];
+     for(let i = 0; i < input.length; i++){
+         let letter= input.charAt(i)
+         if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u' )
+             collectLetter.push(letter);
      }
-    console.log(count.length)
+     return collectLetter.length
  }
-count_vowel('banana');
+ console.log(count_vowel('helicopter'));
+
+//
+//
+// function countLetter(input) {
+//     let count = [];
+//     let word = input.split(',')
+//     for (let i = 0; i < word.length; i++) {
+//         let letter = word[i];
+//         if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u' ){
+//             count.push(letter)
+//             }
+//     }
+//     return count.length
+// }
+//
+// console.log(countLetter('banana'));
