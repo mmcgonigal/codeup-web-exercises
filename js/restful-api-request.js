@@ -36,15 +36,17 @@
 //How can we confirm if it was posted successfully?
 //---> We can look into the data/api itself ; if you have access to it.
 //---> trusting the status of the response
+//바디가 필요 ,
 
 
 
-//PUT - changes something thats already on the API (editing)
+//PUT - replace something thats already on the API (editing)
 //What should be sent with a PUT request?
 //---> identify the data you are changing ( what you are changing)
 //---> What you are changing to --- JSON object
 //WHAT WILL THE RESPONSE BE LIKE ?
 //---> dont get actual data back, have to check the status or make another GET request to see if it updated.
+// 바디가 필요
 
 
 //DELETE - delete a specific data from the API

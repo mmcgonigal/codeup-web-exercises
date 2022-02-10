@@ -188,10 +188,17 @@ userInfo('mmcgonigal');
 
 ///Create your own Promise named wait
 
-let wait = new Promise((resolve,reject)=>{
+function wait(seconds){
+    return new Promise((resolve,reject)=>{
+        resolve(()=>{
+            setTimeout(seconds)
+        })
+    })
+}
+wait(1000).then(()=>{console.log(` you can see this in 1 second  `)})
+wait(2000).then(()=>{console.log(' you can see this in 2 seconds')})
+wait(3000).then(()=>{console.log(`you will see this in 3 seconds`)})
 
-
-})
 
 
 
