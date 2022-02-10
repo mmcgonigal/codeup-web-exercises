@@ -305,10 +305,21 @@
 // }
 // printAll("banana","apple","watermelon");
 
-// Write a function that takes in and array and another input and returns true if the value of the second input is an element in the first input array
+// Write a function that takes in an array and another input and returns true if the value of the second input is an element in the first input array ✅
 
+function compare(arr, input){
+    for( let i = 0 ; i < arr.length; i ++){
+        if(input === arr[i]){
+            return true;
+        }
+    }
+}
+console.log(compare([1,2,3,4,5,6],4))
 
 // Write a function that takes in an array of numbers and returns the lowest number. Assume only number element values and an array of at least two numbers.
+
+
+
 
 // Write a function that takes in an array of numbers and returns the product of the lowest and highest number. Assume only number element values and an array of at least two numbers.
 
@@ -482,16 +493,18 @@
 
 //
 //
-// function countLetter(input) {
-//     let count = [];
-//     let word = input.split(',')
-//     for (let i = 0; i < word.length; i++) {
-//         let letter = word[i];
-//         if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u' ){
-//             count.push(letter)
-//             }
-//     }
-//     return count.length
-// }
-//
-// console.log(countLetter('banana'));
+function countLetter(input) {
+    let count = [];
+    let word = input.split('')
+
+    for (let i = 0; i < word.length; i++) {
+        let letter = word[i];
+        //console.log(word)
+        if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u' ){
+            count.push(letter)
+            }
+    }
+    return count.length
+}
+
+console.log(countLetter('banana'));
