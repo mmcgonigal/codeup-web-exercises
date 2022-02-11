@@ -43,7 +43,10 @@
 //PUT - replace something thats already on the API (editing)
 //What should be sent with a PUT request?
 //---> identify the data you are changing ( what you are changing)
+//---> where does the ID go ? at the end of the url.
 //---> What you are changing to --- JSON object
+// Where do i add the obj that i'm changing the specified thing to ?
+//--->  options object, which is the second parameter to my .fetch() method
 //WHAT WILL THE RESPONSE BE LIKE ?
 //---> dont get actual data back, have to check the status or make another GET request to see if it updated.
 // 바디가 필요
@@ -80,6 +83,7 @@
 //token-possibly
 //endpoint -possibly
 //method type - specify that we are making a POST request.
+
 
 
 
