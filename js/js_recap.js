@@ -238,18 +238,21 @@
 //i+= i
 
 
- addingUp = (input)=>{
-    for (let i = 0; i <= input.length; i++){
-        let character = input.charAt(i)
-            //console.log(character)
+ let input= 'Codeup'
 
-            for(let z = 0 ; z<i+1; z++){
-            let characterAdded = input.charAt(z).concat(character)
-              return characterAdded
-       }
-    }
-}
-console.log(addingUp('codeup'))
+    for (let i = 0; i <= input.length; i++){
+           let character = input.charAt(i)  //character  = input.charAT (0) ; nada --> go to z loop
+            //console.log(character)     // next loop : charAt(1) : c
+
+            let characterAdded = ''     // next loop : charAt(2) : o
+            for(let z = 0 ; z<=i; z++){       // z=0 z<0 -->x
+            characterAdded += input.charAt(z)    //characterAdded  = charAt(0)
+             console.log(characterAdded)
+                                                //  console.log(characterAdded.concat(character));
+            }                                        // 0 c o
+    }                             // character added = charAT (1) //c//0 c 0 d
+
+
 //1. take string as input
 //2.create variable to put result
 //3. everytime loops. add string to result.
