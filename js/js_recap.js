@@ -232,6 +232,24 @@
 // "Codeu"
 // "Codeup"
 
+//input goes in
+//for loop,
+// i = c
+//i+= i
+
+
+ addingUp = (input)=>{
+    for (let i = 0; i <= input.length; i++){
+        let character = input.charAt(i)
+            //console.log(character)
+
+            for(let z = 0 ; z<i+1; z++){
+            let characterAdded = input.charAt(z).concat(character)
+              return characterAdded
+       }
+    }
+}
+console.log(addingUp('codeup'))
 //1. take string as input
 //2.create variable to put result
 //3. everytime loops. add string to result.
