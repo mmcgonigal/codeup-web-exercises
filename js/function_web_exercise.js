@@ -90,7 +90,7 @@ function isTrue(a){
         console.log("False")
     }
 }
-isTrue(true))
+isTrue(true)
 function isFalse(b){
     let type1 = Boolean(a);
     if(!type1){

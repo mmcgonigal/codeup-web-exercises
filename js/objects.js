@@ -219,4 +219,4 @@ heroes.forEach(function(hero){  // index parameter = dont really need many.
 
 })
 
-function heroesInfo()
+

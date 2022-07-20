@@ -252,30 +252,30 @@ function notANumber(input){
 //for loop,
 // i = c
 //i+= i
-let i = 0;
-do{console.log(i); i++}while(i < 10)
-
-var i = 10;
-
-while (i < 10) {
-    console.log('while loop iteration #' + i);
-    i++;
-}
-
- let input= 'Codeup'
-
-    for (let i = 0; i <= input.length; i++){
-           let character = input.charAt(i)  //character  = input.charAT (0) ; nada --> go to z loop
-            //console.log(character)     // next loop : charAt(1) : c
-
-            let characterAdded = ''     // next loop : charAt(2) : o
-            for(let z = 0 ; z<=i; z++){       // z=0 z<0 -->x
-            characterAdded += input.charAt(z)    //characterAdded  = charAt(0)
-            // console.log(characterAdded)
-                                                //  console.log(characterAdded.concat(character));
-            }
-        console.log(characterAdded);// 0 c o
-    }                             // character added = charAT (1) //c//0 c 0 d
+// let i = 0;
+// do{console.log(i); i++}while(i < 10)
+//
+// var i = 10;
+//
+// while (i < 10) {
+//     console.log('while loop iteration #' + i);
+//     i++;
+// }
+//
+//  let input= 'Codeup'
+//
+//     for (let i = 0; i <= input.length; i++){
+//            let character = input.charAt(i)  //character  = input.charAT (0) ; nada --> go to z loop
+//             //console.log(character)     // next loop : charAt(1) : c
+//
+//             let characterAdded = ''     // next loop : charAt(2) : o
+//             for(let z = 0 ; z<=i; z++){       // z=0 z<0 -->x
+//             characterAdded += input.charAt(z)    //characterAdded  = charAt(0)
+//             // console.log(characterAdded)
+//                                                 //  console.log(characterAdded.concat(character));
+//             }
+//         console.log(characterAdded);// 0 c o
+//     }                             // character added = charAT (1) //c//0 c 0 d
 
 //1. take string as input
 //2.create variable to put result
