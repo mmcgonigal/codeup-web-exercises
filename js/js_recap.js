@@ -127,15 +127,25 @@
 //     return input*3;
 // }
 // console.log(tripleValue(4));
+function tripleValue(input){
+    return input*3;
+}
 
 // Modify the above function to work with numeric strings as well.✅
+function isNumber(input){
+    return Number(input) === parseInt(input);
+}
 
 // function isNumber(input){
 //     return Number(input)=== parseInt(input);
 // }
 
 //Number converts the type whereas parseInt parses the value of input.✅
-
+function stillNumber(input){
+    if(isNumber(inout)){
+        return parseInt(input)*3;
+    }
+}
 
 // console.log (isNumber('4'))
 //
@@ -151,6 +161,12 @@
 
 
 // Modify the above function to return a string output of 'not a number' if the input is not a number or numeric string.✅
+
+function notANumber(input){
+    if(!isNumber(input) || isNaN(input)){
+        return `${input} is not a number.`
+    }
+}
 
 // function notANumber(input){
 //     if(!isNumber(input) || isNaN(input)){
@@ -236,7 +252,15 @@
 //for loop,
 // i = c
 //i+= i
+let i = 0;
+do{console.log(i); i++}while(i < 10)
 
+var i = 10;
+
+while (i < 10) {
+    console.log('while loop iteration #' + i);
+    i++;
+}
 
  let input= 'Codeup'
 
@@ -247,11 +271,11 @@
             let characterAdded = ''     // next loop : charAt(2) : o
             for(let z = 0 ; z<=i; z++){       // z=0 z<0 -->x
             characterAdded += input.charAt(z)    //characterAdded  = charAt(0)
-             console.log(characterAdded)
+            // console.log(characterAdded)
                                                 //  console.log(characterAdded.concat(character));
-            }                                        // 0 c o
+            }
+        console.log(characterAdded);// 0 c o
     }                             // character added = charAT (1) //c//0 c 0 d
-
 
 //1. take string as input
 //2.create variable to put result

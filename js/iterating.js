@@ -26,6 +26,10 @@
     console.log("The third name is "+ names[2])
     console.log("The forth name is " + names[3])
 
+    for(let i = 0 ; i <= names.length; i++){
+        console.log(`The number of ${i+1} name is ${names[i]} .`)
+    }
+
 
     /**
      * TODO:

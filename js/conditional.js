@@ -220,3 +220,5 @@ function oddEven (inputNumber){  //when user put a number on prompt, first thing
         alert("You are supposed to put number!")
     }
 }
+
+
