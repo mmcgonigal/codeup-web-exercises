@@ -88,29 +88,98 @@ function getWeather(lat,lon){
     })
 }
 
-
-})
-
-
-            // data.forEach(function (day) {
-
-            //
-            // let today = new Date((data.list[i].dt) * 1000).toDateString();
-
-
-
-
-
-
-
+    // $('.search__button').click(function () {
+    //     let address = $(".cityName").val();
+    //     console.log(address);
+    //     geocode(address,mapKey).then(function(coordinates) {
+    //         // console.log(coordinates);
+    //         // console.log(coordinates[0]); //127 lon
+    //         // console.log(coordinates[1]); //37 lat
+    //         $('#card_table').empty()
+    //         getWeather(coordinates[1],coordinates[0]);
+    //         marker.setLngLat(coordinates[0],coordinates[1]);
+    //         map.flyTo({
+    //             center: [coordinates[0],coordinates[1]],
+    //             essential: true,
+    //             zoom :11
+    //         })
+    //     })
+    // })
 
     $('.search__button').click(function () {
         let address = $(".cityName").val();
         console.log(address);
         geocode(address,mapKey).then(function(coordinates) {
-            console.log(coordinates);
+            // console.log(coordinates);
+            // console.log(coordinates[0]); //127 lon
+            // console.log(coordinates[1]); //37 lat
+            $('#card_table').empty()
+
+            getWeather(coordinates[1],coordinates[0]);
+            marker.setLngLat(coordinates[0],coordinates[1]).addTo(map)
+            map.flyTo({
+                center: [coordinates[0],coordinates[1]],
+                essential: true,
+                zoom :11
+            })
         })
     })
+
+    function onDragEnd(){
+    let lonlat = marker.getLngLat();
+    console.log(lonlat);
+        $('#card_table').empty()
+        getWeather(lonlat.lat,lonlat.lng);
+    getWeather();
+    }
+
+    marker.on('dragend',onDragEnd);
+
+
+
+    function geocode(search, token) {
+        var baseUrl = 'https://api.mapbox.com';
+        var endPoint = '/geocoding/v5/mapbox.places/';
+
+        return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+            .then(function(res) {
+                return res.json();
+                // to get all the data from the request, comment out the following three lines...
+            }).then(function(data) {
+                return data.features[0].center;
+            });
+    }
+
+    function add_marker(e){
+        let coordinate = e.lngLat;
+        console.log('Lng:', e.lngLat.lng, 'Lat:', e.lngLat.lat);
+        marker.setLngLat(coordinate).addTo(map);
+        map.flyTo({
+            center: [coordinate.lng, coordinate.lat],
+            essential:true,
+            zoom: 11});
+        $('#card_table').empty()
+
+        getWeather(coordinate.lat, coordinate.lng);
+    }
+
+    map.on('dblclick', add_marker);
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 //
 //
 //
@@ -222,18 +291,7 @@ function getWeather(lat,lon){
 //
 //
 //
-// function geocode(search, token) {
-//     var baseUrl = 'https://api.mapbox.com';
-//     var endPoint = '/geocoding/v5/mapbox.places/';
-//
-//     return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
-//         .then(function(res) {
-//             return res.json();
-//             // to get all the data from the request, comment out the following three lines...
-//         }).then(function(data) {
-//             return data.features[0].center;
-//         });
-// }
+
 //
 //
 //
