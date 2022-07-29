@@ -1,4 +1,5 @@
 'use strict'
+$(document).ready(function(){
 let today = '';
 let temp_min = '';
 let temp_max = '';
@@ -14,6 +15,9 @@ let weather_icon = '';
     let lon = -98.49
     mapboxgl.accessToken = mapKey;
 
+
+
+
     const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
@@ -27,7 +31,9 @@ let weather_icon = '';
     marker.setLngLat([lon, lat])
         .addTo(map);
 
+    getWeather(lat,lon);
 
+function getWeather(lat,lon){
     $.get("https://api.openweathermap.org/data/2.5/forecast", {
         APPID: weatherKey,
         lon: lon,
@@ -36,26 +42,29 @@ let weather_icon = '';
         exclude: "current,hourly,hourly,alerts"
     }).done(function (data) {
         console.log(data)
-       let currentCity = document.querySelector(".nameOfcity")
-        currentCity.innerHTML=data.city.name
-        // let sliceDays = data.daily.slice(0, 5)  // extract 5 days out of 7 days array.
-        //         console.log(sliceDays)
 
-        for(let i = 0; i <data.list[i]; i+=8) {
-            console.log(data.list[i])
+        let currentCity = document.querySelector(".nameOfcity")
+        currentCity.innerHTML = data.city.name;
+        for (let i = 0; i < data.list.length; i += 8) {
 
+            let day = data.list[i];
 
-            // data.forEach(function (day) {
+            today = new Date(day.dt * 1000).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            })
+            console.log(today)
 
-
-            let today = new Date((data.list[i].clouds.dt) * 1000).toDateString();
-            temp_min = day.temp.min;
-            temp_max = day.temp.max;
+            temp_min = day.main.temp_min;
+            temp_max = day.main.temp_max;
             weather_description = day.weather[0].description;
-            humidity = day.humidity;
-            wind_speed = day.wind_speed;
-            weather_pressure = day.pressure;
-            weather_icon = day.weather[0].icon
+            humidity = day.main.humidity;
+            wind_speed = day.wind.speed;
+            weather_pressure = day.main.pressure;
+            weather_icon = day.weather[0].icon;
+
+
 
 
             let daysForm = `<div class="card  forecast__body">
@@ -71,23 +80,37 @@ let weather_icon = '';
                         <li class="list-group-item">Wind : ${wind_speed}</li>
                         <li class="list-group-item">Pressure : ${weather_pressure}</li>
                     </ul>
-                </div>`;
-
-
+                </div>`
             $('#card_table').append(daysForm)
+
+
         }
-
-
-
     })
+}
 
-//     $('.search__button').click(function () {
-//         let address = $(".geocoder").val();
-//         console.log(address);
-//         geocode(address,mapKey).then(function(coordinates) {
-//             console.log(coordinates);
-//         })
-//     })
+
+})
+
+
+            // data.forEach(function (day) {
+
+            //
+            // let today = new Date((data.list[i].dt) * 1000).toDateString();
+
+
+
+
+
+
+
+
+    $('.search__button').click(function () {
+        let address = $(".cityName").val();
+        console.log(address);
+        geocode(address,mapKey).then(function(coordinates) {
+            console.log(coordinates);
+        })
+    })
 //
 //
 //
