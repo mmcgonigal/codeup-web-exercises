@@ -88,6 +88,25 @@ function getWeather(lat,lon){
     })
 }
 
+    $('.search__button').click(function () {
+        let address = $(".cityName").val();
+        console.log(address);
+        let lonlat = marker.getLngLat()
+        geocode(address,mapKey).then(function(coordinates) {
+            // console.log(coordinates);
+            // console.log(coordinates[0]); //127 lon
+            // console.log(coordinates[1]); //37 lat
+            $('#card_table').empty()
+            getWeather(coordinates[1],coordinates[0]);
+            marker.setLngLat([coordinates[0],coordinates[1]]);
+            map.flyTo({
+                center: [coordinates[0],coordinates[1]],
+                essential: true,
+                zoom :11
+            })
+        })
+    })
+
     // $('.search__button').click(function () {
     //     let address = $(".cityName").val();
     //     console.log(address);
@@ -96,8 +115,9 @@ function getWeather(lat,lon){
     //         // console.log(coordinates[0]); //127 lon
     //         // console.log(coordinates[1]); //37 lat
     //         $('#card_table').empty()
+    //
     //         getWeather(coordinates[1],coordinates[0]);
-    //         marker.setLngLat(coordinates[0],coordinates[1]);
+    //         marker.setLngLat(coordinates[0],coordinates[1]).addTo(map)
     //         map.flyTo({
     //             center: [coordinates[0],coordinates[1]],
     //             essential: true,
@@ -105,25 +125,6 @@ function getWeather(lat,lon){
     //         })
     //     })
     // })
-
-    $('.search__button').click(function () {
-        let address = $(".cityName").val();
-        console.log(address);
-        geocode(address,mapKey).then(function(coordinates) {
-            // console.log(coordinates);
-            // console.log(coordinates[0]); //127 lon
-            // console.log(coordinates[1]); //37 lat
-            $('#card_table').empty()
-
-            getWeather(coordinates[1],coordinates[0]);
-            marker.setLngLat(coordinates[0],coordinates[1]).addTo(map)
-            map.flyTo({
-                center: [coordinates[0],coordinates[1]],
-                essential: true,
-                zoom :11
-            })
-        })
-    })
 
     function onDragEnd(){
     let lonlat = marker.getLngLat();
